@@ -1,0 +1,227 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+code {
+    background-color: #eee;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+pre {
+    background-color: #f3f3f3;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+/* Remove numbers from ordered lists and replace them with dots */
+ol {
+    list-style-type: disc; /* Use dots instead of numbers */
+    padding-left: 20px; /* Optional: Add some space for better alignment */
+}
+
+li {
+    margin-bottom: 8px; /* Optional: Add spacing between list items */
+}
+
+blockquote {
+    background-color: #f3f3f3;
+    border-left: 5px solid #ccc;
+    padding: 10px;
+    font-style: italic;
+    margin: 20px 0;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+.dark-mode blockquote, .dark-mode code, .dark-mode pre {
+	color: #2c2c2c;
+}
+
+.dark-mode, .dark-mode #helpContent, .dark-mode h1, .dark-mode h2, .dark-mode h3 {
+	background-color: #2c2c2c;
+	color: #ecf0f1;
+}
+
+#hotlinkBox {
+	width: 210px;
+	position: absolute;
+	top: 20px;
+	right: 10px;
+	border-radius: 10px;
+	border: 1px solid #555;
+    background-color: #f3f3f3;
+}
+
+.dark-mode #hotlinkBox {
+	background-color: #2c2c2c;
+}
+
+#hotlinkBox,
+#hotlinkBox a {
+	display: block;
+	text-decoration: none;
+	color: #000;
+	margin-bottom: 1px;
+	font-weight: bold;
+}
+
+#hotlinkBox a:hover {
+	text-decoration: underline;
+}
+
+.dark-mode #hotlinkBox,
+.dark-mode #hotlinkBox a {
+	color: #f3f3f3;
+}
+
+#hotlinkBox div {
+	position: relative;
+    height: 25px;
+}
+
+#hotlinkBox a {
+	position: absolute;
+	left: 35px;
+}
+
+#hotlinkBox a.hotlinkTab {
+	display: block;
+    width: 8px;
+    font-size: 12px;
+    line-height: 0;
+    position: absolute;
+    left: 0;
+    border-radius: 5px;
+    border: 1px solid #333;
+    padding: 10px;
+    background-color: #555;
+	text-decoration: none;
+}
+
+#hotlinkBox a.hotlinkTab:hover {
+    border: 1px solid #555;
+    background-color: #333;
+}
+
+#hotlinkBox .dark-mode a.hotlinkTab {
+	border: 1px solid #f3f3f3;
+	background-color: #afaeae;
+}
+
+.markdownContainer {
+	font-family: 'Georgia', serif;
+	line-height: 1.6;
+	padding: 1em;
+	border-radius: 8px;
+}
+
+.md-h1, .md-h2, .md-h3, .md-h4 {
+	margin-top: 1.2em;
+	margin-bottom: 0.5em;
+	font-weight: bold;
+}
+
+.md-h1 { font-size: 2em; border-bottom: 2px solid #ccc; }
+.md-h2 { font-size: 1.75em; border-bottom: 1px solid #ddd; }
+.md-h3 { font-size: 1.5em; }
+.md-h4 { font-size: 1.25em; }
+
+.md-paragraph {
+	margin: 0.5em 0;
+}
+
+.md-list {
+	padding-left: 1.5em;
+	margin: 0.5em 0;
+}
+
+.md-list-item {
+	margin-bottom: 0.3em;
+}
+
+.md-blockquote {
+	border-left: 4px solid #ccc;
+	padding-left: 1em;=
+	font-style: italic;
+}
+
+.md-inline-code {
+	background-color: #eee;
+	padding: 0.2em 0.4em;
+	border-radius: 4px;
+	font-family: 'Courier New', monospace;
+}
+
+pre code {
+	background-color: #f0f0f0;
+	display: block;
+	padding: 1em;
+	border-radius: 6px;
+	overflow-x: auto;
+}
+
+.md-link {
+	color: #0066cc;
+	text-decoration: none;
+}
+
+.md-link:hover {
+	text-decoration: underline;
+}
+
+.svgfill {
+	margin-bottom: -10px
+}
+
+.svgfill1 {
+	fill:#FFBD8D;
+}
+
+.svgfill2 {
+	fill:#FFAF74;
+}
+
+.svgfill3 {
+	fill:#FFCCA6;
+}
+
+.svgfill4 {
+	fill:#bcbfc2;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    margin: 0;
+    font-family: sans-serif;
+  }
+
+  #hotlinkBox {
+    display: none;
+  }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="<%= langType %>">
+<head>
+<!--
+/**  ██╗██╗                                                                 ██╗██╗
+ *   ██║╚═╝  ████████╗ ██████    ██████╗UOTES  ██████╗ ██████╗ ███╗   ███╗  ╚═╝██║
+ *   ██║     ╚══██╔══╝ ██╔═██╗I ██╔═══██╗     ██╔════╝██╔═══██╗████╗ ████║     ██║
+ *   ██║        ██║H   █████╔╝B ██║   ██║     ██║     ██║   ██║██╔████╔██║     ██║
+ *   ██║        ██║E   ██║ ██╗L ██║  █ █║     ██║     ██║   ██║██║╚██╔╝██║     ██║
+ *   ██║        ██║    ██████║E ╚█████ ██╗ ██╗╚██████╗╚██████╔╝██║ ╚═╝ ██║     ██║
+ *   ██║██╗     ╚═╝      ╚═══╝S  ╚═══════╝ ╚═╝ ╚═════╝ ╚═════╝ ╚═╝     ╚═╝  ██╗██║
+ *   ╚═╝╚═╝                                                                 ╚═╝╚═╝
+ * TheBiblesQuotes Project
+ * © 2025 BadNintendo - Study.EJS
+ * All rights reserved.
+ * Unauthorized copying of this file, via any medium, is strictly prohibited.
+ * 
+ * USAGE:
+ * This software is provided 'as-is', without express or implied warranty. The authors are
+ * not liable for damages arising from its use.
+ * 
+ * You may use this software for personal and commercial purposes under the following conditions:
+ * 1. Do not misrepresent the origin of the software; do not claim it as your own.
+ * 2. Altered versions must be marked as such and not misrepresented as the original.
+ * 3. This notice must remain intact in all source distributions.
+ */
+ -->
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Enhance your Bible study journey with markdown-based notes. Discover tips, techniques, and tools to deepen your understanding of the scriptures.">
+    <meta name="author" content="BadNintendo">
+    <meta name="keywords" content="Bible study, markdown notes, scripture tools, verses, chapters, God, Jesus, faith, Christianity, Bible resources, study tips, religious resources, KJV, NKJV, WEB, ESV, NIV, NLT, NET, NLV, TYNDALE, GENEVA, COVERDALE, BISHOPS, ASV">
+    <meta name="robots" content="index, follow">
+    <meta property="og:url" content="https://thebiblesquotes.com/study">
+    <meta property="og:title" content="The Bibles Quotes - Study Tips for Exploring the Bible">
+    <meta property="og:description" content="Discover study tips, markdown techniques, and tools for effectively exploring Bible scriptures. Deepen your faith and expand your biblical understanding.">
+    <meta property="og:image" content="https://thebiblesquotes.com/images/tbqlogo.png">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://thebiblesquotes.com/study">
+    <meta name="twitter:title" content="The Bibles Quotes - Study Techniques for Bible Exploration">
+    <meta name="twitter:description" content="Enhance your Bible studies with markdown-based techniques and resources. Explore scripture efficiently and deepen your connection with the Word.">
+    <meta name="twitter:image" content="https://thebiblesquotes.com/images/tbqlogo.png">
+    <meta name="twitter:site" content="@TheBiblesQuote">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" href="https://thebiblesquotes.com/images/tbq.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="https://thebiblesquotes.com/images/tbq.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" sizes="120x120" href="https://thebiblesquotes.com/images/tbq.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="https://thebiblesquotes.com/images/tbq.png">
+    <title>The Bibles Quotes - Study Tips for Exploring the Bible</title>
+    <link rel="canonical" href="https://thebiblesquotes.com/study">
+	<link rel="stylesheet" href="../css/study.css">
+	<link rel="stylesheet" href="../css/shared.css">
+	<% if (highLight && highLight.trim() !== '') { %>
+		<% const [bgColor, textColor] = highLight.split(',').map(color => color.trim()).filter(Boolean); %>
+		<link rel="stylesheet" href="../css/highlight.css?highlight=<%= bgColor %>,<%= textColor %>">
+	<% } %>
+</head>
+<body class="<%= darkMode ? 'dark-mode' : '' %>">
+    <h1>
+		<svg height="64px" width="64px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000" stroke="#000000" stroke-width="4.608"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path class="svgfill" d="M7.691,502.906h98.425l24.253-80.109l-24.253-80.109C47.716,372.32,7.691,432.936,7.691,502.906z"></path> <path class="svgfill" d="M268.379,342.689l-24.253,80.108l24.253,80.109h98.425 C366.804,432.936,326.78,372.32,268.379,342.689z"></path> </g> <path class="svgfill2;" d="M187.248,323.348c-29.196,0-56.763,6.974-81.132,19.339v160.218h162.263V342.689 C244.01,330.324,216.445,323.348,187.248,323.348z"></path> <circle class="svgfill3" cx="187.253" cy="189.898" r="89.783"></circle> <path class="svgfill4" d="M417.319,512c-5.021,0-9.092-4.068-9.095-9.091l-0.126-296.816 c-56.551-18.9-89.454-78.95-73.861-137.234c6.406-23.947,21.753-43.965,43.218-56.368c21.46-12.403,46.469-15.706,70.417-9.298 c19.628,5.251,36.034,17.83,46.2,35.421c10.165,17.592,12.871,38.087,7.62,57.715c-4.325,16.17-14.69,29.689-29.183,38.064 c-14.492,8.376-31.38,10.606-47.552,6.28c-27.673-7.403-44.165-35.942-36.761-63.617c6.182-23.107,30.008-36.881,53.119-30.695 c9.425,2.521,17.305,8.562,22.186,17.008c4.881,8.448,6.181,18.29,3.66,27.715c-1.298,4.852-6.283,7.738-11.137,6.435 c-4.852-1.298-7.733-6.284-6.435-11.137c1.266-4.73,0.614-9.672-1.838-13.912c-2.451-4.241-6.405-7.273-11.137-8.539 c-13.419-3.588-27.257,4.409-30.847,17.826c-4.812,17.986,5.905,36.533,23.891,41.344c11.476,3.069,23.463,1.489,33.75-4.458 c10.285-5.944,17.643-15.539,20.713-27.016c8.247-30.826-10.123-62.615-40.95-70.862c-39.752-10.631-80.731,13.053-91.363,52.797 c-13.611,50.875,16.774,103.355,67.732,116.988c3.976,1.063,6.743,4.666,6.745,8.782l0.129,303.571 C426.416,507.925,422.345,511.998,417.319,512z"></path> </g></svg>
+		Study Notes
+	</h1>
+    <div id="studyContent"></div>
+	<script src="../javascript/study.js"></script>
+</body>
+</html>

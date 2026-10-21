@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="<%= langType %>">
+<head>
+<!--
+/**  ██╗██╗                                                                 ██╗██╗
+ *   ██║╚═╝  ████████╗ ██████    ██████╗UOTES  ██████╗ ██████╗ ███╗   ███╗  ╚═╝██║
+ *   ██║     ╚══██╔══╝ ██╔═██╗I ██╔═══██╗     ██╔════╝██╔═══██╗████╗ ████║     ██║
+ *   ██║        ██║H   █████╔╝B ██║   ██║     ██║     ██║   ██║██╔████╔██║     ██║
+ *   ██║        ██║E   ██║ ██╗L ██║  █ █║     ██║     ██║   ██║██║╚██╔╝██║     ██║
+ *   ██║        ██║    ██████║E ╚█████ ██╗ ██╗╚██████╗╚██████╔╝██║ ╚═╝ ██║     ██║
+ *   ██║██╗     ╚═╝      ╚═══╝S  ╚═══════╝ ╚═╝ ╚═════╝ ╚═════╝ ╚═╝     ╚═╝  ██╗██║
+ *   ╚═╝╚═╝                                                                 ╚═╝╚═╝
+ * TheBiblesQuotes Project
+ * © 2025 BadNintendo - FullBible.EJS
+ * All rights reserved.
+ * Unauthorized copying of this file, via any medium, is strictly prohibited.
+ * 
+ * USAGE:
+ * This software is provided 'as-is', without express or implied warranty. The authors are
+ * not liable for damages arising from its use.
+ * 
+ * You may use this software for personal and commercial purposes under the following conditions:
+ * 1. Do not misrepresent the origin of the software; do not claim it as your own.
+ * 2. Altered versions must be marked as such and not misrepresented as the original.
+ * 3. This notice must remain intact in all source distributions.
+ */
+ -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Immerse yourself in the teachings of God's Word by reading a full Bible book of your choice. Deepen your understanding of Jesus's messages and explore the scriptures in their entirety.">
+	<meta name="author" content="BadNintendo">
+	<meta name="keywords" content="Bible, full book, scriptures, verses, chapters, study, reflection, God, Jesus, faith, Christianity, devotion, worship, Gospel, religious resources, prayer, Bible study tools, KJV, NKJV, WEB, ESV, NIV, NLT, NET, NLV, TYNDALE, GENEVA, COVERDALE, BISHOPS, ASV">
+	<meta name="robots" content="index, follow">
+	<meta property="og:url" content="https://thebiblesquotes.com/bible/<%= version %>/">
+	<meta property="og:title" content="The Bibles Quotes - Read Full Bible Books">
+	<meta property="og:description" content="Choose and read complete Bible books to enrich your faith journey. Dive deep into God's Word and explore the profound teachings of Jesus through scripture.">
+	<meta property="og:image" content="https://thebiblesquotes.com/images/tbqlogo.png">
+	<meta property="og:type" content="website">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:url" content="https://thebiblesquotes.com/bible/<%= version %>/">
+	<meta name="twitter:title" content="The Bibles Quotes - Read Full Bible Books">
+	<meta name="twitter:description" content="Enrich your spiritual journey by reading full Bible books. Choose your favorite scripture and delve into the powerful teachings of faith, God, and Jesus.">
+	<meta name="twitter:image" content="https://thebiblesquotes.com/images/tbqlogo.png">
+	<meta name="twitter:site" content="@TheBiblesQuote">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="icon" href="https://thebiblesquotes.com/images/tbq.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="https://thebiblesquotes.com/images/tbq.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" sizes="120x120" href="https://thebiblesquotes.com/images/tbq.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="https://thebiblesquotes.com/images/tbq.png">
+	<title>The Bibles Quotes - <%= version %></title>
+	<link rel="canonical" href="https://thebiblesquotes.com/bible/<%= version %>/">
+	<link rel="stylesheet" href="../../css/fullbible.css">
+    <% if (highLight && highLight.trim() !== '') { %>
+		<% const [bgColor, textColor] = highLight.split(',').map(color => color.trim()).filter(Boolean); %>
+		<link rel="stylesheet" href="../../css/highlight.css?highlight=<%= bgColor %>,<%= textColor %>">
+	<% } %>
+</head>
+<body class="<%= darkMode ? 'dark-mode' : '' %>">
+	<div class="mainContent">
+		<% 
+			const capsFirst = (blah) => {
+			if (typeof blah === 'string' && blah.length > 0) return blah.charAt(0).toUpperCase() + blah.slice(1);
+				return blah;
+			};
+		%>
+		<h1>Full Bible Version : <%= version %> : <span id="bookName"><%= capsFirst(book); %></span></h1>
+		<div id="content">
+			<%- content %>
+		</div>
+	</div>
+	<div id="slidePanel" class="slide-panel hide"></div>
+	<div id="slideTabs" class="slide-tabs">
+		<div id="slideTabsClose" class="slide-tabs-close">x</div>
+		Tabs
+	</div>
+    <div id="data-container"
+		data-book='<%= book %>'
+	    data-chapter='<%= chapter %>' 
+	    data-version='<%= version %>'
+		data-chapters='<%- JSON.stringify(chapters) %>'>
+	</div>
+	<script src="../../javascript/fullbible.js"></script>
+</body>
+</html>

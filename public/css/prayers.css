@@ -1,0 +1,453 @@
+body {
+	background-color: #f0f0f0;
+}
+
+body.dark-mode  {
+	background-color: #888;
+}
+
+.contained {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr); /* Columns by month */
+	grid-template-rows: auto 1fr;
+	gap: 0 16px;
+	padding: 8px;
+	position: absolute;
+	top: 113px;
+	bottom: 8px;
+	left: 8px;
+	right: 8px;
+	overflow-x: auto;
+	background-color: #f0f0f0;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.dark-mode .contained {
+	background-color: #888;
+}
+
+h2, 
+.terms-check {
+	color: #333;
+	text-shadow: 0px 5px 8px rgba(255, 255, 255, 1);
+}
+
+.dark-mode h2, 
+.dark-mode .terms-check  {
+	color: #FFF;
+	text-shadow: 0px 5px 8px rgba(0, 0, 0, 1);
+}
+
+.dark-mode #fullViewModal h2 {
+	color: #000;
+}
+
+.prayerCard {
+	position: relative;
+	width: 90%;
+	height: 100%;
+	min-height: 295px;
+	max-height: 349px;
+	min-width: 370px;
+	max-width: 420px;
+	padding: 10px;
+	margin-bottom: -190px; /* Overlap with previous note */
+	box-shadow: 7px 5px 6px rgba(0, 0, 0, 0.3), 0px -1px 6px rgba(0, 0, 0, 0.3);
+	background: linear-gradient(  to top,  rgba(255, 255, 255, 0.2),  rgba(0, 0, 0, 0.1));
+	border-radius: 0 0 0 80px/80px;
+	font-size: 1.2rem;
+	overflow: hidden;
+	transition: all 0.3s ease;
+	cursor: pointer;
+	word-wrap: break-word;
+	z-index: 1;
+}
+
+.prayerCard:hover {
+	transform: scale(1.05);
+	z-index: 10;
+}
+
+.prayerCard:before {
+ 	content: "";
+	display: block;
+	position: absolute;
+	width: 52px;
+    height: 45px;
+	box-shadow: 3px 2px 14px rgba(0, 0, 0, 0.6), inset 0px -7px 9px rgba(0, 0, 0, 0.8);
+	left: 0;
+	bottom: -5px;
+	z-index: 2;
+	transform: skewX(25deg);
+}
+
+.dark-mode .prayerCard {
+	box-shadow: 7px 5px 6px rgba(255, 255, 255,0.3), 0px -1px 6px rgba(255, 255, 255, 0.3);
+}
+
+.january, .january::before, .january::after     { background-color: #ffd5d5; }
+.february, .february::before, .february::after  { background-color: #ffe2b6; }
+.march, .march::before, .march::after           { background-color: #fff3a5; }
+.april, .april::before, .april::after           { background-color: #d0ffd5; }
+.may, .may::before, .may::after                 { background-color: #c6f7ff; }
+.june, .june::before, .june::after              { background-color: #e0d5ff; }
+.july, .july::before, .july::after              { background-color: #ffd9f2; }
+.august, .august::before, .august::after        { background-color: #ffefc1; }
+.september, .september::before, .september::after { background-color: #d2ffe6; }
+.october, .october::before, .october::after     { background-color: #f2cbcb; }
+.november, .november::before, .november::after  { background-color: #fff0da; }
+.december, .december::before, .december::after  { background-color: #e8f1ff; }
+
+.context {
+	font-weight: bolder;
+	font-size: larger;
+}
+
+#fullViewModal {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 85%;
+	height: 95%;
+	background-color: #fffbe6;
+	box-shadow: 0 0 20px rgba(0,0,0,0.4);
+	font-size: larger;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	padding: 20px;
+	overflow-y: auto;
+	border-radius: 10px;
+	word-wrap: break-word;
+	z-index: 999;
+	cursor: pointer;
+}
+
+#closeFullview {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	cursor: pointer;
+}
+
+.form-container {
+	 background-color: #f2f2f2;
+	 border: 1px solid #333;
+	 padding: 20px;
+	 border-radius: 10px;
+	 max-width: 500px;
+	 margin: auto;
+	 font-family: Arial, sans-serif;
+}
+
+.form-container label {
+	 display: block;
+	 margin-bottom: 15px;
+}
+
+input[type="text"],
+select,
+textarea {
+	 width: 100%;
+	 padding: 10px;
+	 border-radius: 10px;
+	 box-sizing: border-box;
+	 background-color: #2e2e2e;
+	 color: #fff;
+	 border: 1px solid #555;
+}
+
+#charCount {
+	 font-size: 0.9em;
+	 color: #555;
+	 text-align: right;
+}
+
+button {
+	 padding: 10px 15px;
+	 border-radius: 10px;
+	 border: none;
+	 background-color: #444;
+	 color: white;
+	 cursor: not-allowed;
+}
+
+button:enabled {
+	 background-color: #0078D7;
+	 cursor: pointer;
+}
+
+input::placeholder {
+	color: #888;
+	font-style: italic;
+}
+
+.dark-mode .form-container {
+	 background-color: #1e1e1e;
+	 color: #eee;
+	 border: 1px solid #eee;
+}
+
+.dark-mode input,
+.dark-mode select,
+.dark-mode textarea {
+	 background-color: #2e2e2e;
+	 color: #fff;
+	 border: 1px solid #555;
+}
+
+.dark-mode button {
+	 background-color: #444;
+}
+
+.dark-mode button:enabled {
+	 background-color: #0a84ff;
+}
+
+.form-container.success {
+	 border: 2px solid #28a745; /* Green */
+}
+
+.form-container.error {
+	 border: 2px solid #dc3545; /* Red */
+}
+
+/* Dynamic button styling */
+button#submitBtn.success {
+	 background-color: #28a745 !important;
+	 cursor: default;
+}
+
+button#submitBtn.error {
+	 background-color: #dc3545 !important;
+	 cursor: default;
+}
+
+.hide {
+	display: none;
+}
+
+.svgfill {
+	fill:#556080;
+}
+
+.svgfill1 {
+	fill:#38454F;
+}
+
+.svgfill2 {
+	fill:#8697CB;
+}
+
+.svgfill3 {
+	fill:#FFFFFF;
+}
+
+.svgbg {
+	width: 50px;
+	height: 50px;
+}
+
+.svgstyle1 { fill: #DD955F; }
+.svgstyle2 { fill: #492D25; }
+.svgstyle3 { fill: #9E5439; }
+.svgstyle4 { fill: #FFECD9; }
+.svgstyle1 { fill: #434A54; }
+.svgstyle2 { fill: #AAB2BC; }
+.svgstyle3 { fill: #E6E9ED; }
+.svgstyle4 { fill: #656D78; }
+.svgstyle5 { fill: #CCD1D9; }
+.svgstyle6 { fill: #ED5564; }
+.svgstyle7 { fill: #DBADA2; }
+.svgstyle8 { fill: #EAC6BB; }
+.svgstyle1 { fill: #F5E038; }
+.svgstyle2 { opacity: 0.7; fill: #F9AA0C; enable-background: new; }
+.svgstyle3 { fill: #F9C900; }
+.svgstyle4 { fill: #F9AA0C; }
+.svgstyle5 { fill: #40CACF; }
+.svgstyle1 { fill: #E57E25; }
+.svgstyle2 { fill: #F0C419; }
+.svgstyle3 { fill: #F29C1F; }
+.svgstyle4 { fill: #F0EDE0; }
+.svgstyle5 { fill: #D6D1BB; }
+.svgstyle1 { fill: #FFBA12; }
+.svgstyle1 { fill: #492D25; }
+.svgstyle2 { fill: #B27761; }
+.svgstyle1 { fill: #FFE1B2; }
+.svgstyle2 { fill: #FFD7A3; }
+.svgstyle3 { fill: #FDC88E; }
+.svgstyle4 { fill: #DCDCDC; }
+.svgstyle5 { fill: #545465; }
+.svgstyle6 { fill: #E4EBF0; }
+.svgstyle7 { fill: #D0D7DC; }
+.svgstyle1 { fill: #DD3B31; }
+.svgstyle2 { fill: #FFD670; }
+.svgstyle3 { fill: #FFAF74; }
+.svgstyle4 { fill: #B27761; }
+.svgstyle1 { fill: #606271; }
+.svgstyle3 { fill: #4D8AEB; }
+.svgstyle4 { fill: #FFFFFF; }
+.svgstyle5 { fill: #FFCCA6; }
+.svgstyle1 { fill: #ecc165; }
+.svgstyle2 { fill: #ddc992; }
+.svgstyle3 { fill: #785d11; }
+.svgstyle4 { fill: #8e6815; }
+.svgstyle1 { fill: #F1CF91; }
+.svgstyle3 { fill: #B27761; }
+.svgstyle1 { fill: #C3A458; }
+.svgstyle2 { fill: #DABA75; }
+.svgstyle1 { fill: #10744A; }
+.svgstyle2 { fill: #169B62; }
+.svgstyle3 { fill: #FFAB58; }
+.svgstyle4 { fill: #FFCD71; }
+.svgstyle5 { fill: #FFCFB2; }
+.svgstyle6 { fill: #FFB88B; }
+.svgstyle7 { fill: #D7E1E1; }
+.svgstyle8 { fill: #FFFFFF; }
+.svgstyle1 { fill: #B77423; }
+.svgstyle2 { fill: #A86522; }
+.svgstyle3 { fill: #995C0D; }
+.svgstyle4 { fill: #E6E6E6; }
+.svgstyle5 { fill: #CCCCCC; }
+.svgstyle6 { fill: #F7B239; }
+.svgstyle7 { fill: #F95428; }
+.svgstyle2 { fill: #DD955F; }
+.svgstyle3 { fill: #DD3B31; }
+.svgstyle5 { fill: #991B17; }
+.svgstyle3 { fill: #F1CF91; }
+.svgstyle5 { fill: #FFBA12; }
+.svgstyle6 { fill: #DD3B31; }
+.svgstyle7 { fill: #991B17; }
+.svgstyle8 { fill: #DD955F; }
+.svgstyle9 { fill: #9E5439; }
+.svgstyle10 { fill: #FFDA44; }
+.svgstyle11 { fill: #FFAD41; }
+.svgstyle12 { fill: #FFE6C6; }
+.svgstyle13 { fill: #50412E; }
+.svgstyle14 { fill: #FFD6A0; }
+.svgstyle15 { fill: #A0815C; }
+.svgstyle16 { fill: #786145; }
+.svgstyle17 { fill: #FFD670; }
+.svgstyle18 { fill: #FFAF74; }
+.svgstyle19 { fill: #C3A458; }
+.svgstyle20 { fill: #DABA75; }
+.svgstyle21 { fill: #FFA561; }
+.svgstyle22 { fill: #695352; }
+.svgstyle23 { fill: #4F3E3E; }
+.svgstyle24 { fill: #94D77F; }
+.svgstyle25 { opacity: 0.1; enable-background: new; }
+.svgstyle26 { fill: #fec9a3; }
+.svgstyle27 { fill: #e3e3e1; }
+.svgstyle28 { fill: #fd9a30; }
+.svgstyle29 { fill: #f28e22; }
+.svgstyle30 { fill: #fec093; }
+.svgstyle31 { fill: #7a4321; }
+.svgstyle32 { fill: #e66b65; }
+.svgstyle33 { fill: #ebebe8; }
+.svgstyle34 { fill: #c9c9c8; }
+.svgstyle35 { fill: #10744A; }
+.svgstyle36 { fill: #169B62; }
+.svgstyle37 { fill: #FFAB58; }
+.svgstyle38 { fill: #FFCD71; }
+.svgstyle39 { fill: #FFCFB2; }
+.svgstyle40 { fill: #FFB88B; }
+.svgstyle41 { fill: #D7E1E1; }
+.svgstyle42 { fill: #FFFFFF; }
+.svgstyle43 { fill: #FFE1B2; }
+.svgstyle44 { fill: #FFD7A3; }
+.svgstyle45 { fill: #FDC88E; }
+.svgstyle46 { fill: #DCDCDC; }
+.svgstyle47 { fill: #545465; }
+.svgstyle48 { fill: #E4EBF0; }
+.svgstyle49 { fill: #D0D7DC; }
+.svgstyle50 { fill: #606271; }
+.svgstyle51 { fill: #4D8AEB; }
+.svgstyle52 { fill: #FFCCA6; }
+.svgstyle53 { fill: #763F31; }
+.svgstyle54 { fill: #AB899B; }
+.svgstyle55 { fill: #A9603A; }
+.svgstyle56 { fill: #FFD089; }
+.svgstyle57 { fill: #F7D0BC; }
+.svgstyle58 { fill: #460929; }
+.svgstyle59 { fill: #733B59; }
+.svgstyle60 { fill: #FFB13A; }
+.svgstyle61 { fill: #F5E038; }
+.svgstyle62 { opacity: 0.7; fill: #F9AA0C; enable-background: new; }
+.svgstyle63 { fill: #F9C900; }
+.svgstyle64 { fill: #F9AA0C; }
+.svgstyle65 { fill: #40CACF; }
+.svgstyle66 { stroke: #000000; stroke-width: 0.5; }
+.svgstyle67 { fill: #f9a003; stroke: #f9a003; stroke-width: 0.5; }
+.svgstyle68 { fill: #f9cf8c; stroke: #f9cf8c; stroke-width: 0.5; }
+.svgstyle69 { fill: #e0ba7e; stroke: #e0ba7e; stroke-width: 0.5; }
+.svgstyle70 { fill: #f7e3ba; stroke: #f7e3ba; stroke-width: 0.5; }
+.svgstyle71 { opacity: 0.7; fill: #4e3300; stroke: #4e3300; stroke-width: 0.5; }
+.svgstyle72 { opacity: 0.70999995; fill: #5e3c01; stroke: #5e3c01; stroke-width: 0.5; }
+.svgstyle73 { fill: #e09003; stroke: #e09003; stroke-width: 0.5; }
+.svgstyle74 { fill: #e1bb7f; stroke: #e1bb7f; stroke-width: 0.5; }
+.svgstyle75 { fill: #E57E25; }
+.svgstyle76 { fill: #F0C419; }
+.svgstyle77 { fill: #F29C1F; }
+.svgstyle78 { fill: #F0EDE0; }
+.svgstyle79 { fill: #D6D1BB; }
+.svgstyle80 { fill: #B77423; }
+.svgstyle81 { fill: #A86522; }
+.svgstyle82 { fill: #995C0D; }
+.svgstyle83 { fill: #E6E6E6; }
+.svgstyle84 { fill: #CCCCCC; }
+.svgstyle85 { fill: #F7B239; }
+.svgstyle86 { fill: #F95428; }
+.svgstyle87 { fill: #434A54; }
+.svgstyle88 { fill: #AAB2BC; }
+.svgstyle89 { fill: #E6E9ED; }
+.svgstyle90 { fill: #656D78; }
+.svgstyle91 { fill: #CCD1D9; }
+.svgstyle92 { fill: #ED5564; }
+.svgstyle93 { fill: #DBADA2; }
+.svgstyle94 { fill: #EAC6BB; }
+.svgstyle95 { fill: #ecc165; }
+.svgstyle96 { fill: #ddc992; }
+.svgstyle97 { fill: #785d11; }
+.svgstyle98 { fill: #8e6815; }
+.svgstyle99 { fill: #9777A8; }
+.svgstyle100 { fill: #583E68; }
+.svgstyle101 { fill: #6F58A8; }
+.svgstyle102 { fill: #88C057; }
+.svgstyle103 { fill: #7A3726; }
+.svgstyle104 { fill: #006837; }
+.svgstyle105 { fill: #39B54A; }
+.svgstyle106 { fill: #51791B; }
+.svgstyle107 { fill: #3D5B14; }
+.svgstyle108 { fill: #8CC63F; }
+.svgstyle109 { fill: #F4FFF9; }
+.svgstyle110 { fill: #A89B80; }
+.svgstyle111 { fill: #90B5BF; }
+.svgstyle112 { fill: #769CA5; }
+.svgstyle113 { fill: #EFDDAB; }
+.svgstyle114 { fill: #817e79; }
+.svgstyle115 { fill: #e5bb80; }
+.svgstyle116 { fill: #eeb46d; }
+.svgstyle117 { fill: #B28D5B; }
+.svgstyle118 { fill: #7F5D3B; }
+.svgstyle119 { fill: #FF8355; }
+.svgstyle120 { fill: #E55D30; }
+.svgstyle121 { fill: #5B7A7F; }
+.svgstyle122 { fill: #FFA233; }
+.svgstyle123 { fill: #FF7E1D; }
+.svgstyle124 { fill: #DBCBA1; }
+
+.hostIcon {
+	position: 			absolute;
+}
+
+.hostIcon #Capa_1 {
+	margin-top: 		-14px;
+	box-shadow: 		0px 8px 16px 0px rgba(0, 0, 0, 0.4);
+}
+
+.hostIcon #Capa_1:hover {
+	box-shadow: 		0px 8px 16px 0px rgba(0, 0, 0, 0.6);
+}
+
+.dark-mode #Capa_1:hover {
+	box-shadow: 		0px 8px 16px 0px rgba(248, 248, 248, 0.4);
+}

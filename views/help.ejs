@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="<%= langType %>">
+<head>
+<!--
+/**  ██╗██╗                                                                 ██╗██╗
+ *   ██║╚═╝  ████████╗ ██████    ██████╗UOTES  ██████╗ ██████╗ ███╗   ███╗  ╚═╝██║
+ *   ██║     ╚══██╔══╝ ██╔═██╗I ██╔═══██╗     ██╔════╝██╔═══██╗████╗ ████║     ██║
+ *   ██║        ██║H   █████╔╝B ██║   ██║     ██║     ██║   ██║██╔████╔██║     ██║
+ *   ██║        ██║E   ██║ ██╗L ██║  █ █║     ██║     ██║   ██║██║╚██╔╝██║     ██║
+ *   ██║        ██║    ██████║E ╚█████ ██╗ ██╗╚██████╗╚██████╔╝██║ ╚═╝ ██║     ██║
+ *   ██║██╗     ╚═╝      ╚═══╝S  ╚═══════╝ ╚═╝ ╚═════╝ ╚═════╝ ╚═╝     ╚═╝  ██╗██║
+ *   ╚═╝╚═╝                                                                 ╚═╝╚═╝
+ * TheBiblesQuotes Project
+ * © 2025 BadNintendo - Help.EJS
+ * All rights reserved.
+ * Unauthorized copying of this file, via any medium, is strictly prohibited.
+ * 
+ * USAGE:
+ * This software is provided 'as-is', without express or implied warranty. The authors are
+ * not liable for damages arising from its use.
+ * 
+ * You may use this software for personal and commercial purposes under the following conditions:
+ * 1. Do not misrepresent the origin of the software; do not claim it as your own.
+ * 2. Altered versions must be marked as such and not misrepresented as the original.
+ * 3. This notice must remain intact in all source distributions. */
+ -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Master the art of searching scriptures with The Bibles Quotes. Learn tips and tricks to efficiently find chapters, verses, and Bible books across multiple translations.">
+	<meta name="author" content="BadNintendo">
+	<meta name="keywords" content="Bible, search tips, scriptures, verses, chapters, user guide, help, navigation, study tools, God, Jesus, faith, Christianity, Bible search features, religious resources, KJV, NKJV, WEB, ESV, NIV, NLT, NET, NLV, TYNDALE, GENEVA, COVERDALE, BISHOPS, ASV">
+	<meta name="robots" content="index, follow">
+	<meta property="og:url" content="https://thebiblesquotes.com/help">
+	<meta property="og:title" content="The Bibles Quotes - Help Tips for Searching Scriptures">
+	<meta property="og:description" content="Navigate The Bibles Quotes search features with ease. Learn how to find and explore Bible chapters, verses, and books across multiple translations in just a few clicks.">
+	<meta property="og:image" content="https://thebiblesquotes.com/images/tbqlogo.png">
+	<meta property="og:type" content="website">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:url" content="https://thebiblesquotes.com/help">
+	<meta name="twitter:title" content="The Bibles Quotes - Help Tips for Searching Scriptures">
+	<meta name="twitter:description" content="Explore The Bibles Quotes help page for search tips. Master how to find Bible scriptures with efficiency and deepen your faith journey.">
+	<meta name="twitter:image" content="https://thebiblesquotes.com/images/tbqlogo.png">
+	<meta name="twitter:site" content="@TheBiblesQuote">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="icon" href="https://thebiblesquotes.com/images/tbq.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="https://thebiblesquotes.com/images/tbq.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" sizes="120x120" href="https://thebiblesquotes.com/images/tbq.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="https://thebiblesquotes.com/images/tbq.png">
+	<title>The Bibles Quotes - Search Help Tips</title>
+	<link rel="canonical" href="https://thebiblesquotes.com/help">
+	<link rel="stylesheet" href="../css/help.css">
+	<link rel="stylesheet" href="../css/shared.css">
+	<% if (highLight && highLight.trim() !== '') { %>
+		<% const [bgColor, textColor] = highLight.split(',').map(color => color.trim()).filter(Boolean); %>
+		<link rel="stylesheet" href="../css/highlight.css?highlight=<%= bgColor %>,<%= textColor %>">
+	<% } %>
+</head>
+<body class="<%= darkMode ? 'dark-mode' : '' %>">
+    <div id="helpContent"></div>
+	<div id="hotlinkBox"><!--Make a tab on left side on links to scrollto value if clicked-->
+		<div><a class="hotlinkTab" href="#section-5" >☰</a><a title="Highlight: Blue & White" 	href="https://thebiblesquotes.com/?highlight=Blue,White"							>5. Highlight Colors</a></div>
+		<div><a class="hotlinkTab" href="#section-6" >☰</a><a title="Share Bible Verses" 		href="https://thebiblesquotes.com/?reference=John%203:16%20Mark%201%20Luke%201:1"	>6. Share Verses</a></div>
+		<div><a class="hotlinkTab" href="#section-8" >☰</a><a title="Dark Mode View" 			href="https://thebiblesquotes.com/?mode=dark"										>8. Enable Dark Mode</a></div>
+		<div><a class="hotlinkTab" href="#section-9" >☰</a><a title="Zoom 125%" 				href="https://thebiblesquotes.com/?zoom=125"										>9. Zoom Text</a></div>
+		<div><a class="hotlinkTab" href="#section-10">☰</a><a title="Use NKJV and KJV" 			href="https://thebiblesquotes.com/?bible=NKJV,KJV"									>10. Bible Versions</a></div>
+		<div><a class="hotlinkTab" href="#section-12" >☰</a><a title="API for Free Usage" 		href="https://thebiblesquotes.com/api?ref=John+3:16&bible=KJV"						>12. API for Free</a></div>
+		<div><a class="hotlinkTab" href="#section-13">☰</a><a title="Study Full Index" 			href="https://thebiblesquotes.com/study?index"										>13. Study Index</a></div>
+		<div><a class="hotlinkTab" href="#section-13">☰</a><a title="Today's Summary" 			href="https://thebiblesquotes.com/study?daily"										>13. Daily Summary</a></div>
+		<div><a class="hotlinkTab" href="#section-15">☰</a><a title="Host Live Session" 		href="https://live.thebiblesquotes.com/?host"										>15. Host Live Session</a></div>
+		<div><a class="hotlinkTab" href="#section-16">☰</a><a title="View Live Sessions" 		href="https://live.thebiblesquotes.com/directory"									>15. Host Live Session</a></div>
+		<div><a class="hotlinkTab" href="#section-18">☰</a><a title="Search a Phrase" 			href="https://thebiblesquotes.com/?reference=$Jesus"								>18. Search a Phrase</a></div>
+		<div><a class="hotlinkTab" href="#section-20">☰</a><a title="Custom Prayer Wall" 		href="https://thebiblesquotes.com/prayers?key=whatever"								>20. Prayer Wall</a></div>
+		<div><a class="hotlinkTab" href="#section-24">☰</a><a title="Bible View" 				href="https://thebiblesquotes.com/fullbible/KJV/"									>24. Full Bible</a></div>
+	</div>
+    <div id="data-container"
+	    data-bibles='<%- JSON.stringify(bibles) %>'>
+	</div>
+	<script src="../javascript/custom.js"></script>
+	<script src="../javascript/help.js"></script>
+</body>
+</html>

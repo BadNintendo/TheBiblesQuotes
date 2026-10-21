@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="<%= langType; %>">
+	<head>
+		<!--
+		/**  ██╗██╗                                                                 ██╗██╗
+		 *   ██║╚═╝  ████████╗ ██████    ██████╗UOTES  ██████╗ ██████╗ ███╗   ███╗  ╚═╝██║
+		 *   ██║     ╚══██╔══╝ ██╔═██╗I ██╔═══██╗     ██╔════╝██╔═══██╗████╗ ████║     ██║
+		 *   ██║        ██║H   █████╔╝B ██║   ██║     ██║     ██║   ██║██╔████╔██║     ██║
+		 *   ██║        ██║E   ██║ ██╗L ██║  █ █║     ██║     ██║   ██║██║╚██╔╝██║     ██║
+		 *   ██║        ██║    ██████║E ╚█████ ██╗ ██╗╚██████╗╚██████╔╝██║ ╚═╝ ██║     ██║
+		 *   ██║██╗     ╚═╝      ╚═══╝S  ╚═══════╝ ╚═╝ ╚═════╝ ╚═════╝ ╚═╝     ╚═╝  ██╗██║
+		 *   ╚═╝╚═╝                                                                 ╚═╝╚═╝
+		 * TheBiblesQuotes Project
+		 * © 2025 BadNintendo - PrayersPost.EJS
+		 * All rights reserved.
+		 * Unauthorized copying of this file, via any medium, is strictly prohibited.
+		 * 
+		 * USAGE:
+		 * This software is provided 'as-is', without express or implied warranty. The authors are
+		 * not liable for damages arising from its use.
+		 * 
+		 * You may use this software for personal and commercial purposes under the following conditions:
+		 * 1. Do not misrepresent the origin of the software; do not claim it as your own.
+		 * 2. Altered versions must be marked as such and not misrepresented as the original.
+		 * 3. This notice must remain intact in all source distributions.
+		 * Notes:
+		 * 1. Bring results container to bottom of container and main container to bottom of page.
+		 */
+		 -->
+		<%- metaheader; %>
+		<link rel="stylesheet" href="../css/prayers.css">
+		<link rel="stylesheet" href="../css/shared.css">
+		<script src="../javascript/prayers.js"></script>
+	</head>
+	<body class="<%= themeColor; %>">
+		<div class="mainContent">
+			<center>
+				<h2>
+					<b>Prayer Wall</b>
+					<svg class="svgfill" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" width="24px" height="24px" fill="#000000" stroke="#000000" stroke-width="12"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <polygon class="svgfill1" points="282.765,87.546 282.765,0 248.49,0 225.735,374.601 282.765,374.601 282.765,118.175 321.926,129.553 356.199,129.553 356.199,76.169 321.926,76.169 "></polygon> <g> <polygon class="svgfill2" points="321.926,76.169 248.491,76.169 248.491,0 195.106,0 195.106,76.169 121.671,76.169 121.671,129.553 195.106,129.553 195.106,374.6 248.491,374.6 248.491,129.553 321.926,129.553 "></polygon> <rect x="321.925" y="351.846" class="svgfill2" width="45.648" height="53.386"></rect> </g> <rect x="367.629" y="405.231" class="svgfill3" width="57.025" height="53.385"></rect> <rect x="413.322" y="458.615" class="svgfill2" width="68.403" height="53.385"></rect> <rect x="121.676" y="351.846" class="svgfill4" width="200.249" height="53.386"></rect> <rect x="75.972" y="405.231" class="svgfill5" width="291.647" height="53.386"></rect> <rect x="30.275" y="458.615" class="svgfill4" width="383.044" height="53.385"></rect> </g></svg>
+				</h2>
+			</center>
+			<form id="prayerForm" class="form-container" action="post" method="POST">
+			  <input type="hidden" name="key" value="<%= key; %>" />
+			  <label>
+			    Name (optional):
+			    <input type="text" name="name" maxlength="32" placeholder="Your name (optional)" autocomplete="off">
+			  </label>
+			  <label>
+			    Type:
+			    <select name="type" required>
+				    <option value="" disabled selected>Select Type</option>
+					<option title="For physical, emotional, or spiritual health" value="healing">Healing</option>
+					<option title="For financial needs, bills, or resources" value="provision">Provision</option>
+					<option title="For clarity in decisions or uncertain paths" value="guidance">Guidance</option>
+					<option title="Expressing gratitude and appreciation" value="thanksgiving">Thanksgiving</option>
+					<option title="Praying on behalf of others" value="intercession">Intercession</option>
+					<option title="Acknowledging personal faults and seeking forgiveness" value="confession">Confession</option>
+					<option title="Seeking inner calm, harmony, or resolution" value="peace">Peace</option>
+					<option title="Urgent requests requiring immediate divine attention" value="urgent">Urgent</option>
+					<option title="Seeking insight and understanding for life or decisions" value="wisdom">Wisdom</option>
+					<option title="Asking for emotional and spiritual reassurance" value="comfort">Comfort</option>
+					<option title="Looking toward possibility, trust, and faith in outcomes" value="hope">Hope</option>
+					<option title="Calling on physical, mental, or spiritual resilience" value="strength">Strength</option>
+					<option title="Lifting up those who care for others, often under strain" value="caregiver_support">Caregiver Support</option>
+					<option title="Prayers about relationships, reconciliation, or connection" value="relationship">Relationship</option>
+					<option title="Seeking contentment or guidance in seasons of singleness" value="singleness">Singleness</option>
+					<option title="Concerns or trust around upcoming plans and long-term paths" value="future">Future</option>
+					<option title="Asking for shielding and safety from harm or danger" value="protection">Protection</option>
+					<option title="Desiring divine movement and resolution in stubborn areas" value="breakthrough">Breakthrough</option>
+					<option title="Prayers for renewal, healing, and rebuilding what was lost" value="restoration">Restoration</option>
+					<option title="Celebrating God's goodness, glory, and faithfulness" value="praise">Praise</option>
+			    </select>
+			  </label>
+			  <label>
+			    Context (max 1500 characters):
+			    <textarea name="context" id="contextInput" rows="8" required><%= (saved != false) ? saved : '' %></textarea>
+			    <div id="charCount">0 / 1500</div>
+			  </label>
+			  <label class="terms-check">
+			    <input name="terms" type="checkbox" id="termsCheckbox">
+			    I agree to the <a href="/terms" target="_blank">terms</a>
+			  </label>
+			  <button type="submit" id="submitBtn" disabled>Submit</button>
+			</form>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="<%= langType %>">
+<head>
+<!--
+/**  ██╗██╗                                                                 ██╗██╗
+ *   ██║╚═╝  ████████╗ ██████    ██████╗UOTES  ██████╗ ██████╗ ███╗   ███╗  ╚═╝██║
+ *   ██║     ╚══██╔══╝ ██╔═██╗I ██╔═══██╗     ██╔════╝██╔═══██╗████╗ ████║     ██║
+ *   ██║        ██║H   █████╔╝B ██║   ██║     ██║     ██║   ██║██╔████╔██║     ██║
+ *   ██║        ██║E   ██║ ██╗L ██║  █ █║     ██║     ██║   ██║██║╚██╔╝██║     ██║
+ *   ██║        ██║    ██████║E ╚█████ ██╗ ██╗╚██████╗╚██████╔╝██║ ╚═╝ ██║     ██║
+ *   ██║██╗     ╚═╝      ╚═══╝S  ╚═══════╝ ╚═╝ ╚═════╝ ╚═════╝ ╚═╝     ╚═╝  ██╗██║
+ *   ╚═╝╚═╝                                                                 ╚═╝╚═╝
+ * TheBiblesQuotes Project
+ * © 2025 BadNintendo - Live.EJS
+ * All rights reserved.
+ * Unauthorized copying of this file, via any medium, is strictly prohibited.
+ * 
+ * USAGE:
+ * This software is provided 'as-is', without express or implied warranty. The authors are
+ * not liable for damages arising from its use.
+ * 
+ * You may use this software for personal and commercial purposes under the following conditions:
+ * 1. Do not misrepresent the origin of the software; do not claim it as your own.
+ * 2. Altered versions must be marked as such and not misrepresented as the original.
+ * 3. This notice must remain intact in all source distributions.
+ * Notes:
+ * 1. Bring results container to bottom of container and main container to bottom of page.
+ */
+ -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=690">
+	<meta name="description" content="Immerse yourself in the teachings of God's Word by hosting a live session. Deepen your understanding of Jesus's messages and explore the scriptures in their entirety.">
+	<meta name="author" content="BadNintendo">
+	<meta name="keywords" content="Live Bible Study, Bible, full book, scriptures, verses, chapters, study, reflection, God, Jesus, faith, Christianity, devotion, worship, Gospel, religious resources, prayer, Bible study tools, KJV, NKJV, WEB, ESV, NIV, NLT, NET, NLV, TYNDALE, GENEVA, COVERDALE, BISHOPS, ASV">
+	<meta name="robots" content="index, follow">
+	<meta property="og:url" content="https://thebiblesquotes.com/live?session=<%= session %>,bible=<%= versions %>`">
+	<meta property="og:title" content="The Bibles Quotes - Sharing Live Bible Study">
+	<meta property="og:description" content="Live Bible Study to enrich your faith journey. Dive deep into God's Word and explore the profound teachings of Jesus through scripture.">
+	<meta property="og:image" content="https://thebiblesquotes.com/images/tbqlogo.png">
+	<meta property="og:type" content="website">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:url" content="https://thebiblesquotes.com/live?session=<%= session %>,bible=<%= versions %>">
+	<meta name="twitter:title" content="The Bibles Quotes - Sharing Live Bible Study">
+	<meta name="twitter:description" content="Enrich your spiritual journey by hosting a live session. Choose your favorite scripture and delve into the powerful teachings of faith, God, and Jesus.">
+	<meta name="twitter:image" content="https://thebiblesquotes.com/images/tbqlogo.png">
+	<meta name="twitter:site" content="@TheBiblesQuote">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="icon" href="https://thebiblesquotes.com/images/tbq.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="https://thebiblesquotes.com/images/tbq.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" sizes="120x120" href="https://thebiblesquotes.com/images/tbq.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="https://thebiblesquotes.com/images/tbq.png">
+	<title>Live Search | Session <%= session %> - <%= versions %></title>
+	<link rel="canonical" href="https://thebiblesquotes.com/live?session=<%= session %>,bible=<%= versions %>">
+	<link rel="stylesheet" href="../css/live.css">
+	<link rel="stylesheet" href="../css/shared.css">
+	<link rel="stylesheet" href="../css/highlight.css">
+    <% if (highLight && highLight.trim() !== '') { %>
+		<% const [bgColor, textColor] = highLight.split(',').map(color => color.trim()).filter(Boolean); %>
+		<link rel="stylesheet" id="custom" href="../css/highlight.css?highlight=<%= bgColor %>,<%= textColor %>">
+	<% } %>
+</head>
+<body class="<%= darkMode ? 'dark-mode ' : '' %><%= host ? '' : 'view-only' %>">
+	<div class="dropDownMenu">
+		Controls <svg fill="#000000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-47.26 -47.26 567.12 567.12" xml:space="preserve" width="24px" height="24px" transform="rotate(0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#fcfcfc" stroke-width="52.930752000000005"> <g> <g> <circle cx="51.259" cy="60.967" r="51.259"></circle> </g> </g> <g> <g> <rect x="154.073" y="51.121" width="318.523" height="19.692"></rect> </g> </g> <g> <g> <circle cx="51.259" cy="236.298" r="51.259"></circle> </g> </g> <g> <g> <rect x="154.073" y="226.452" width="318.523" height="19.692"></rect> </g> </g> <g> <g> <circle cx="51.259" cy="411.628" r="51.259"></circle> </g> </g> <g> <g> <rect x="154.073" y="401.782" width="318.523" height="19.692"></rect> </g> </g> </g><g id="SVGRepo_iconCarrier"> <g> <g> <circle cx="51.259" cy="60.967" r="51.259"></circle> </g> </g> <g> <g> <rect x="154.073" y="51.121" width="318.523" height="19.692"></rect> </g> </g> <g> <g> <circle cx="51.259" cy="236.298" r="51.259"></circle> </g> </g> <g> <g> <rect x="154.073" y="226.452" width="318.523" height="19.692"></rect> </g> </g> <g> <g> <circle cx="51.259" cy="411.628" r="51.259"></circle> </g> </g> <g> <g> <rect x="154.073" y="401.782" width="318.523" height="19.692"></rect> </g> </g> </g></svg>
+		<div class="box inneroutterGlow">
+			<%
+			const fullsizeSVG = `M21.434 11.975l8.602-8.549-0.028 4.846c-0.009 0.404 0.311 0.755 0.716 0.746l0.513-0.001c0.404-0.009 0.739-0.25 0.748-0.654l0.021-7.219c0-0.007-0.027-0.012-0.027-0.019l0.040-0.366c0.004-0.203-0.044-0.384-0.174-0.513-0.13-0.131-0.311-0.21-0.512-0.204l-0.366 0.009c-0.007 0-0.012 0.003-0.020 0.004l-7.172-0.032c-0.404 0.009-0.738 0.343-0.747 0.748l-0.001 0.513c0.061 0.476 0.436 0.755 0.84 0.746l4.726 0.013-8.572 8.52c-0.39 0.39-0.39 1.024 0 1.415s1.023 0.39 1.414 0zM10.597 20.025l-8.602 8.523 0.027-4.82c0.010-0.404-0.312-0.756-0.716-0.747l-0.544 0.001c-0.405 0.010-0.739 0.25-0.748 0.654l-0.021 7.219c0 0.007 0.028 0.011 0.028 0.019l-0.040 0.365c-0.005 0.203 0.043 0.385 0.174 0.514 0.129 0.131 0.311 0.21 0.512 0.205l0.366-0.009c0.007 0 0.012-0.003 0.020-0.003l7.203 0.032c0.404-0.010 0.738-0.344 0.748-0.748l0.001-0.514c-0.062-0.476-0.436-0.755-0.84-0.746l-4.726-0.012 8.571-8.518c0.39-0.39 0.39-1.023 0-1.414s-1.023-0.391-1.413-0zM32.007 30.855l-0.021-7.219c-0.009-0.404-0.343-0.645-0.747-0.654l-0.513-0.001c-0.404-0.009-0.725 0.343-0.716 0.747l0.028 4.846-8.602-8.549c-0.39-0.39-1.023-0.39-1.414 0s-0.39 1.023 0 1.414l8.571 8.518-4.726 0.012c-0.404-0.009-0.779 0.27-0.84 0.746l0.001 0.514c0.009 0.404 0.344 0.739 0.747 0.748l7.172-0.032c0.008 0 0.013 0.003 0.020 0.003l0.366 0.009c0.201 0.005 0.384-0.074 0.512-0.205 0.131-0.129 0.178-0.311 0.174-0.514l-0.040-0.365c0-0.008 0.027-0.012 0.027-0.019zM3.439 2.041l4.727-0.012c0.404 0.009 0.778-0.27 0.84-0.746l-0.001-0.513c-0.010-0.405-0.344-0.739-0.748-0.748l-7.204 0.031c-0.008-0.001-0.013-0.004-0.020-0.004l-0.366-0.009c-0.201-0.005-0.383 0.074-0.512 0.204-0.132 0.13-0.179 0.31-0.174 0.514l0.040 0.366c0 0.007-0.028 0.012-0.028 0.020l0.021 7.219c0.009 0.404 0.343 0.645 0.748 0.654l0.545 0.001c0.404 0.009 0.724-0.342 0.715-0.746l-0.028-4.819 8.602 8.523c0.39 0.39 1.024 0.39 1.414 0s0.39-1.024 0-1.415z`;
+			const smallsizeSVG = `M11.975 10.838l-0.021-7.219c-0.009-0.404-0.344-0.644-0.748-0.654l-0.513-0.001c-0.405-0.009-0.725 0.343-0.716 0.747l0.028 4.851-8.321-8.242c-0.391-0.391-1.024-0.391-1.414 0s-0.391 1.024 0 1.414l8.285 8.207-4.721 0.012c-0.404-0.009-0.779 0.27-0.84 0.746l0.001 0.513c0.010 0.405 0.344 0.739 0.748 0.748l7.172-0.031c0.008 0.001 0.013 0.003 0.020 0.003l0.366 0.008c0.201 0.005 0.383-0.074 0.512-0.205 0.132-0.13 0.178-0.311 0.175-0.514l-0.040-0.366c0.001-0.007 0.027-0.012 0.027-0.019zM20.187 11.736c0.129 0.13 0.311 0.21 0.512 0.205l0.366-0.008c0.007 0 0.012-0.002 0.020-0.004l7.172 0.031c0.404-0.009 0.738-0.344 0.747-0.748l0.001-0.513c-0.061-0.476-0.436-0.755-0.84-0.746l-4.721-0.012 8.285-8.207c0.391-0.391 0.391-1.024 0-1.414s-1.023-0.391-1.414 0l-8.32 8.241 0.027-4.851c0.009-0.404-0.311-0.756-0.715-0.747l-0.513 0.001c-0.405 0.010-0.739 0.25-0.748 0.654l-0.021 7.219c0 0.007 0.027 0.012 0.027 0.020l-0.040 0.366c-0.005 0.203 0.043 0.384 0.174 0.514zM11.813 20.232c-0.13-0.131-0.311-0.21-0.512-0.205l-0.366 0.009c-0.007 0-0.012 0.003-0.020 0.003l-7.173-0.032c-0.404 0.009-0.738 0.343-0.748 0.747l-0.001 0.514c0.062 0.476 0.436 0.755 0.84 0.745l4.727 0.012-8.29 8.238c-0.391 0.39-0.391 1.023 0 1.414s1.024 0.39 1.414 0l8.321-8.268-0.028 4.878c-0.009 0.404 0.312 0.756 0.716 0.747l0.513-0.001c0.405-0.010 0.739-0.25 0.748-0.654l0.021-7.219c0-0.007-0.027-0.011-0.027-0.019l0.040-0.397c0.005-0.203-0.043-0.384-0.174-0.514zM23.439 22.028l4.727-0.012c0.404 0.009 0.779-0.27 0.84-0.745l-0.001-0.514c-0.010-0.404-0.344-0.739-0.748-0.748h-7.172c-0.008-0-0.013-0.003-0.020-0.003l-0.428-0.009c-0.201-0.006-0.384 0.136-0.512 0.267-0.131 0.13-0.178 0.311-0.174 0.514l0.040 0.366c0 0.008-0.027 0.012-0.027 0.019l0.021 7.219c0.009 0.404 0.343 0.644 0.748 0.654l0.544 0.001c0.404 0.009 0.725-0.343 0.715-0.747l-0.027-4.829 8.352 8.22c0.39 0.391 1.023 0.391 1.414 0s0.391-1.023 0-1.414z`;
+			const svgIcontype = (defaultSize == 'small') ?  fullsizeSVG : smallsizeSVG;
+			%>
+			<div class="themeToggles" id="changeTheme" title="Change Page Size">
+				<span class="outterSettings"><svg fill="#000000" width="18px" height="18px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" stroke="#000" stroke-width="1.64"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="changeICOsize" d="<%= svgIcontype; %>"></path> </g></svg></span>
+				Page Size
+			</div>
+			<% if (host) { %>
+				<div id="changeIcon" title="Directory Icon for Session">
+					<span class="outterSettings"><svg fill="#000000" width="18px" height="18px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M 5 5 L 5 27 L 27 27 L 27 5 Z M 7 7 L 15 7 L 15 15 L 7 15 Z M 17 7 L 25 7 L 25 15 L 17 15 Z M 11 9 L 8 13 L 14 13 Z M 19 9 L 19 13 L 23 13 L 23 9 Z M 7 17 L 15 17 L 15 25 L 7 25 Z M 17 17 L 25 17 L 25 25 L 17 25 Z M 21 18 L 19 21 L 21 24 L 23 21 Z M 11 19 C 9.894531 19 9 19.894531 9 21 C 9 22.105469 9.894531 23 11 23 C 12.105469 23 13 22.105469 13 21 C 13 19.894531 12.105469 19 11 19 Z"></path></g></svg></span>
+					Change Icon
+				</div>
+				<div id="changeTooltip" title="Change Tooltip/Hints">
+					<span id="changeTooltipSVG" class="iconSVG bookSVG1 outterSettings"></span>Change Tooltip
+				</div>
+			<% } %>
+			<div id="changeLayout" title="Comparasion side by Side">
+				<span class="outterSettings"><svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect x="1" y="32" fill="none" stroke="#000000" stroke-width="4.032" stroke-miterlimit="10" width="31" height="31"></rect> <rect x="32" y="32" fill="none" stroke="#000000" stroke-width="4.032" stroke-miterlimit="10" width="31" height="31"></rect> <rect x="1" y="1" fill="none" stroke="#000000" stroke-width="4.032" stroke-miterlimit="10" width="31" height="31"></rect> <rect x="32" y="1" fill="none" stroke="#000000" stroke-width="4.032" stroke-miterlimit="10" width="31" height="31"></rect> </g></svg></span>
+				Change Layout
+			</div>
+			<% if (host) { %>
+				<div id="toggleHighlightContainer" title="Change Highlight Color">
+					<span class="outterSettings"><svg width="23px" height="23px" viewBox="0 0 73 73" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="fundamentals/css/colors" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <rect id="mask" stroke="#3D670B" stroke-width="2" fill="#FFFFFF" fill-rule="nonzero" x="1" y="1" width="71" height="71" rx="14"> </rect> <g id="color-wheel" transform="translate(37.000000, 37.000000) rotate(-255.000000) translate(-37.000000, -37.000000) translate(11.000000, 11.000000)" fill-rule="nonzero"> <path d="M26,0 L22.953125,5.05273438 L26,9.2421875 L37.8440156,14.1559844 L43.6623281,11.3845469 L44.3044063,7.69559375 C39.6149609,3.00594531 33.1403516,0 26,0 Z" id="Shape" fill="#FF4B00"> </path> <path d="M44.3045078,7.69549219 L37.8440156,14.1559844 L42.7578125,26 L47.6138203,29.046875 L52,26 C52,18.8596484 48.9940547,12.3850391 44.3045078,7.69549219 Z" id="Shape" fill="#FF9F00"> </path> <path d="M42.7578125,26 L37.8440156,37.8440156 L38.1398672,44.2336172 L44.3045078,44.3045078 C48.9940547,39.6149609 52,33.1403516 52,26 L42.7578125,26 Z" id="Shape" fill="#66BB00"> </path> <path d="M37.8440156,37.8440156 L26,42.7578125 L22.953125,47.80425 L26,52 C33.1403516,52 39.6149609,48.9940547 44.3045078,44.3045078 L37.8440156,37.8440156 Z" id="Shape" fill="#00CC71"> </path> <path d="M14.1559844,37.8440156 L8.14724219,37.7590078 L7.69549219,44.3045078 C12.3850391,48.9940547 18.8596484,52 26,52 L26,42.7578125 L14.1559844,37.8440156 Z" id="Shape" fill="#0095FF"> </path> <path d="M9.2421875,26 L4.76703906,22.953125 L0,26 C0,33.1403516 3.00594531,39.6149609 7.69549219,44.3045078 L14.1559844,37.8440156 L9.2421875,26 Z" id="Shape" fill="#6B77E8"> </path> <path d="M11.5751797,8.52810156 L7.69559375,7.69549219 C3.00594531,12.3850391 0,18.8596484 0,26 L9.2421875,26 L14.1559844,14.1559844 L11.5751797,8.52810156 Z" id="Shape" fill="#B760EA"> </path> <path d="M26,9.2421875 L26,0 C18.8596484,0 12.3850391,3.00594531 7.69549219,7.69549219 L14.1559844,14.1559844 C17.1903672,11.1216016 21.3798203,9.2421875 26,9.2421875 Z" id="Shape" fill="#FF193D"> </path> <path d="M26,9.2421875 L22.953125,13.8125 L26,18.3828125 L31.3835234,20.6164766 L37.4257812,17.6210938 L37.8440156,14.1559844 C34.8096328,11.1216016 30.6201797,9.2421875 26,9.2421875 Z" id="Shape" fill="#FF7816"> </path> <path d="M37.8440156,14.1559844 L31.3835234,20.6164766 L33.6171875,26 L37.8440156,29.046875 L42.7578125,26 C42.7578125,21.3798203 40.8783984,17.1903672 37.8440156,14.1559844 Z" id="Shape" fill="#FDBF00"> </path> <path d="M33.6171875,26 L31.3835234,31.3835234 L32.1052266,35.1521016 L37.8440156,37.8440156 C40.8783984,34.8096328 42.7578125,30.6201797 42.7578125,26 L33.6171875,26 Z" id="Shape" fill="#77DD00"> </path> <path d="M31.3835234,31.3835234 L26,33.6171875 L22.953125,38.3779297 L26,42.7578125 C30.6201797,42.7578125 34.8096328,40.8783984 37.8440156,37.8440156 L31.3835234,31.3835234 Z" id="Shape" fill="#00DD7B"> </path> <path d="M20.6164766,31.3835234 L14.1299844,31.7762656 L14.1559844,37.8440156 C17.1903672,40.8783984 21.3798203,42.7578125 26,42.7578125 L26,33.6171875 L20.6164766,31.3835234 Z" id="Shape" fill="#3AAAFF"> </path> <path d="M18.3828125,26 L14.1299844,22.953125 L9.2421875,26 C9.2421875,30.6201797 11.1216016,34.8096328 14.1559844,37.8440156 L20.6164766,31.3835234 L18.3828125,26 Z" id="Shape" fill="#7984EB"> </path> <path d="M20.2871094,14.1933594 L14.1559844,14.1559844 C11.1216016,17.1903672 9.2421875,21.3798203 9.2421875,26 L18.3828125,26 L20.6164766,20.6164766 L20.2871094,14.1933594 Z" id="Shape" fill="#CB75F6"> </path> <path d="M14.1559844,14.1559844 L20.6164766,20.6164766 L26,18.3828125 L26,9.2421875 C21.3798203,9.2421875 17.1903672,11.1216016 14.1559844,14.1559844 Z" id="Shape" fill="#FF4949"> </path> <path d="M31.3835234,20.6164766 C30.0042031,19.2371563 28.0999062,18.3828125 26,18.3828125 L22.953125,21.3820547 L26,26 L31.7386875,23.3081875 L31.3835234,20.6164766 Z" id="Shape" fill="#FF9F00"> </path> <path d="M33.6171875,26 C33.6171875,23.9000938 32.7628438,21.9957969 31.3835234,20.6164766 L26,26 L30.8559063,29.046875 L33.6171875,26 Z" id="Shape" fill="#FFD400"> </path> <path d="M31.3835234,31.3835234 C32.7628438,30.0042031 33.6171875,28.0999062 33.6171875,26 L26,26 L28.6918125,31.7386875 L31.3835234,31.3835234 Z" id="Shape" fill="#89F900"> </path> <path d="M26,26 L22.953125,30.2846172 L26,33.6171875 C28.0999063,33.6171875 30.0042031,32.7628438 31.3835234,31.3835234 L26,26 Z" id="Shape" fill="#00EE84"> </path> <path d="M26,26 L21.4296875,27.5234375 L20.6164766,31.3835234 C21.9957969,32.7628438 23.9000938,33.6171875 26,33.6171875 L26,26 Z" id="Shape" fill="#73BCFF"> </path> <path d="M18.3828125,26 C18.3828125,28.0999063 19.2371563,30.0042031 20.6164766,31.3835234 L26,26 L21.5249531,24.4765625 L18.3828125,26 Z" id="Shape" fill="#979FEF"> </path> <path d="M20.6164766,20.6164766 C19.2371563,21.9957969 18.3828125,23.9000938 18.3828125,26 L26,26 L24.4765625,21.4296875 L20.6164766,20.6164766 Z" id="Shape" fill="#DA90F8"> </path> <path d="M26,18.3828125 C23.9000938,18.3828125 21.9957969,19.2371563 20.6164766,20.6164766 L26,26 L26,18.3828125 Z" id="Shape" fill="#FF6C6C"> </path> </g> </g> </g></svg></span>
+					Highlight Color
+				</div>
+			<% } %>
+			<div id="changeUnderline" class="textUnderline" title="Toggle Verse Underline">
+				<span class="outterSettings"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve" width="18px" height="18px" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <line fill="none" stroke-width="4" stroke-miterlimit="10" x1="26" y1="27" x2="6" y2="27"></line> <path fill="none" stroke-width="4" stroke-miterlimit="10" d="M9,4v12c0,3.9,3.1,7,7,7h0c3.9,0,7-3.1,7-7V4"></path> </g></svg></span>
+				Verse Underline
+			</div>
+			<% if (host) { %>
+				<div id="checkBox" title="Enable Auto Scroll Viewers">Auto Scroll Viewers: <input id="checkBoxInput" type="checkbox" class="checkBox outterSettings"/></div>
+			<% } %>
+			<div id="resultsTTS" title="Text to Speech">
+				<span id="englishTTS" class="inneroutterGlow" title="English Voice">EN</span>
+				<span id="germanTTS" class="inneroutterGlow" title="German Voice">GR</span>
+				<span id="frenchTTS" class="inneroutterGlow" title="French Voice">FR</span>
+				<span id="spanishTTS" class="inneroutterGlow" title="Spanish Voice">SP</span>
+			</div>
+		</div>
+	</div>
+	<div class="switchBox" title="Light and Dark Theme">
+		<input type="checkbox" id="theme-toggle" class="switch" <%= darkMode ? 'checked=""' : '' %>>
+		<span class="slider round"></span>
+	</div>
+	<div id="toggleHighlight" class="hide inneroutterGlow"><center>
+		<div id="colorModeToggle">
+			<button id="toggleBg" class="active">BG C</button>
+			<button id="toggleTxt">TXT C</button>
+		</div>
+		<div id="colorGridWrapper">
+			<div id="colorGrid" tabindex="0" role="grid"></div>
+		</div>
+		<div id="smalldesc" class="smalldesc">Tab (Changes) <span title="Approved (Green)" id="coloredDot">&#9900;</span></div>
+		<div id="highlightExample" class="highlighted">Sample highlighted text</div>
+	</center></div>
+	<div id="rawSvgIcons" class="hide">
+		<div id="selectableGrid">
+			<% const rawSvgIconsGrid = Object.entries(rawSvgIcons); %>
+			<% rawSvgIconsGrid.forEach(([name, icon], index) => { %>
+				<span id="svgSelect-<%= index %>" class="svgIcon" title="Icon: <%= name %>">
+					<%- icon %>
+				</span>
+			<% }); %>
+		</div>
+	</div>
+	<div id="shareLive" title="Share">
+		<svg width="30px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M20 13L20 18C20 19.1046 19.1046 20 18 20L6 20C4.89543 20 4 19.1046 4 18L4 13" stroke="#999" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M16 8L12 4M12 4L8 8M12 4L12 16" stroke="#999" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+		<div id="shareBox" class="inneroutterGlow">
+			<div id="socialx" class="socials x">
+				<?xml version="1.0"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" width="50px" height="50px" viewBox="0 0 24 24" class="svgbg" xml:space="preserve"><path d="M14.095479,10.316482L22.286354,1h-1.940718l-7.115352,8.087682L7.551414,1H1l8.589488,12.231093L1,23h1.940717  l7.509372-8.542861L16.448587,23H23L14.095479,10.316482z M11.436522,13.338465l-0.871624-1.218704l-6.924311-9.68815h2.981339  l5.58978,7.82155l0.867949,1.218704l7.26506,10.166271h-2.981339L11.436522,13.338465z"/></svg><br>
+				X
+			</div>
+			<div id="socialfb" class="socials fb">
+				<?xml version="1.0"?><svg id="Layer_1" class="svgbg" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path class="st0" d="M512,397.1c0,63.5-51.5,114.9-114.9,114.9H114.9C51.5,512,0,460.5,0,397.1V114.9C0,51.5,51.5,0,114.9,0h282.2   C460.5,0,512,51.5,512,114.9V397.1z"/><path class="st1" d="M299,164.7c8.6-0.3,17.2-0.1,25.8-0.1c1,0,2.1,0,3.5,0v-44.7c-4.6-0.5-9.4-1.1-14.2-1.3   c-8.8-0.4-17.6-0.8-26.5-0.6c-13.5,0.3-26.2,3.6-37.3,11.5c-12.8,9.2-19.8,22.1-22.4,37.3c-1.1,6.3-1.4,12.8-1.6,19.2   c-0.2,10,0,20,0,30.1v3.8h-42.7v49.9h42.5v125.4h51.9V269.9h42.4c2.2-16.6,4.3-33,6.5-50.1c-3.4,0-6.5,0-9.5,0   c-12.1,0.1-39.7,0-39.7,0s0.1-24.7,0.4-35.5C278.5,169.6,287.3,165.1,299,164.7z"/></g></svg><br>
+				Facebook
+			</div>
+			<div id="socialre" class="socials re">
+				<?xml version="1.0"?><svg id="Layer_1" class="svgbg" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path class="st0" d="M512,397.1c0,63.5-51.5,114.9-114.9,114.9H114.9C51.5,512,0,460.5,0,397.1V114.9C0,51.5,51.5,0,114.9,0h282.2   C460.5,0,512,51.5,512,114.9V397.1z"/><path class="st1" d="M399.1,240.5c-9.9-15.1-27.6-19-44.7-10.8c-3.4,1.7-8.9,1-12.7-0.5c-11.9-4.6-23-11.1-35.1-14.8   c-13.4-4.1-27.4-5.9-42.7-9c4.4-21.2,9-43,13.7-65.9c13,2.5,24.8,4.8,36.6,7.2c5.8,1.2,10.2,3,12.4,10.1c3,9.8,14.4,15.6,24,14.5   c9.9-1.2,18.8-9.3,20.9-19c2.1-9.5-2.5-19.9-11-24.9c-9.3-5.5-20.9-4.8-28.5,3.4c-4.7,5-9.2,5-14.8,3.8   c-13.1-2.8-26.4-5.2-39.5-8.4c-7.7-1.9-10.7,0.8-12.2,8.1c-4.4,21.6-9.6,43.1-13.8,64.7c-1.2,6.3-3.4,8.8-9.9,9   c-26.1,0.7-50.1,8.8-72.6,21.8c-3,1.8-8.6,1.6-11.8,0c-17.1-8.3-34.8-4.4-44.6,10.7c-9.3,14.2-5.5,32.9,8.5,44.5   c2.2,1.9,4.7,5.3,4.6,7.9c-0.9,25.6,10.3,45.3,29,61.4c48,41.4,136.6,45.5,190.4,8.7c25-17.1,41.9-38.9,40.4-71.3   c-0.1-2.2,2.7-5.1,4.8-6.8C404.6,273.6,408.4,254.6,399.1,240.5L399.1,240.5z M227.9,281.4c-0.1,11.8-10.8,22.2-22.7,22.1   c-12.6-0.1-21.9-9.6-21.8-22.4c0.1-12.6,9.9-22.6,22.1-22.5C217,258.9,228,270,227.9,281.4L227.9,281.4z M301.5,335.9   c2.1-1.5,5.9-0.5,8.9-0.7c-1.2,3.2-1.4,7.6-3.6,9.3c-15,11.5-32.7,13.9-51.5,15.8c-13.6-3.3-27.3-6.4-40.7-10.1   c-3.8-1.1-7.6-3.7-10.3-6.6c-1.8-2-1.7-5.7-2.4-8.7c2.8,0.1,6.3-0.8,8.2,0.6c14.9,10.7,31.9,12.8,49.3,12.3   C274.2,347.4,288.8,345,301.5,335.9L301.5,335.9z M328.6,281.8c-0.2,12.8-9.7,22-22.5,21.7c-11.8-0.2-22.4-11.1-22.1-22.8   c0.3-11.6,11.6-22.4,23.1-22.1C319.5,259.1,328.9,269.1,328.6,281.8L328.6,281.8z"/></g></svg>
+				Reddit
+			</div>
+			<div id="socialcu" class="socials copy">
+				<?xml version="1.0"?><svg height="50px" viewBox="0 0 21 21" width="50px" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(4 3)"><path d="m6.5 11.5-3-3 3-3"/><path d="m3.5 8.5h11"/><path d="m12.5 6.5v-4.00491374c0-.51283735-.3860402-.93550867-.8833789-.99327378l-.1190802-.00672622-1.9975409.00491374m-6 0-1.99754087-.00492752c-.51283429-.00124584-.93645365.38375378-.99544161.88094891l-.00701752.11906329v10.99753792c.00061497.5520447.44795562.9996604 1 1.0006148l10 .0061554c.5128356.0008784.9357441-.3848611.993815-.8821612l.006185-.1172316v-2.5"/><path d="m4.5.5h4c.55228475 0 1 .44771525 1 1s-.44771525 1-1 1h-4c-.55228475 0-1-.44771525-1-1s.44771525-1 1-1z"/></g></svg><br>
+				Copy URL
+			</div>
+		</div>
+	</div>
+	<main class="mainContent<%= (defaultSize == 'small') ? ' narrow' : ''; %> innerOutterShadows" id="content">
+		<div id="usersConnected" title="Amount of Connections">
+			<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="1" xmlns="http://www.w3.org/2000/svg">
+				<path d="M1 12C3 7 8 4 12 4s9 3 11 8c-2 5-7 8-11 8s-9-3-11-8z"/>
+				<circle cx="12" cy="12" r="3"/>
+			</svg>
+			<span id="userCount"></span>
+		</div>
+		<h1>
+			Live Session: <a href="<%= url %>"><%= session %></a>
+			<!--<% if (uuid) { %> <br>UUID: <%= uuid %> <% } %>-->
+			<% if (host) { %>
+				<span title="You are the Key to this Session"><svg title="You are the Key to this Session" height="25px" width="25px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path class="svgfill" d="M178.842,132.986c0-43.028,35.007-78.034,78.035-78.034s78.035,35.006,78.035,78.034v69.395 c15.866,2.447,31.486,5.067,44.753,7.374v-76.769c-0.002-67.705-55.084-122.787-122.789-122.787S134.089,65.281,134.089,132.986 v76.461c13.378-2.319,28.982-4.925,44.753-7.343V132.986z"></path> <path class="svgfill2" d="M379.663,209.756c-13.267-2.307-28.887-4.927-44.753-7.374c-30.381-4.686-61.654-8.736-78.987-8.734 c-16.968,0.001-47.31,3.891-77.083,8.456c-15.771,2.418-31.374,5.024-44.753,7.343c-22.511,3.903-38.71,6.993-38.71,6.993 s0,111.227,0,114.874c0,78.548,160.546,170.487,160.546,170.487S416.62,409.862,416.62,331.314c0-2.127,0-114.874,0-114.874 S401.262,213.512,379.663,209.756z"></path> <path d="M418.53,206.422c-1.453-0.276-12.605-2.395-28.668-5.241v-68.194C389.864,59.657,330.205,0,256.876,0 S123.89,59.657,123.89,132.986v67.88c-16.997,3.003-28.917,5.268-30.422,5.556c-4.809,0.917-8.288,5.122-8.288,10.019v114.874 c0,35.785,28.267,77.033,84.017,122.596c40.327,32.959,79.99,55.786,81.659,56.741c1.57,0.9,3.319,1.348,5.068,1.348 c1.748,0,3.496-0.449,5.065-1.346c1.671-0.956,41.371-23.783,81.734-56.74c55.803-45.564,84.098-86.813,84.098-122.6V216.44 C426.82,211.544,423.34,207.339,418.53,206.422z M324.712,190.521c-26.877-3.947-53.108-7.072-68.779-7.072c-0.002,0-0.007,0-0.01,0 c-15.298,0.001-40.674,2.987-66.882,6.806v-57.269c0-37.405,30.43-67.836,67.836-67.836s67.836,30.43,67.836,67.836V190.521z M144.288,132.986c0-62.081,50.507-112.588,112.588-112.588s112.588,50.507,112.588,112.588v64.657 c-7.722-1.309-15.943-2.666-24.354-4.001v-60.656c0-48.652-39.582-88.234-88.234-88.234s-88.234,39.582-88.234,88.234v60.37 c-8.385,1.324-16.604,2.675-24.354,3.984L144.288,132.986L144.288,132.986z M406.422,331.314c0,28.91-26.418,65.783-76.399,106.635 c-30.875,25.236-62.144,44.793-74.097,51.998c-11.911-7.183-43-26.642-73.819-51.831c-50.065-40.918-76.528-77.85-76.528-106.802 V224.912c27.658-5.102,116.858-21.061,150.347-21.064c0.004,0,0.004,0,0.009,0c33.526,0,122.812,15.964,150.487,21.065v106.401 H406.422z"></path> <path class="svgfill3" d="M283.672,307.015c0-14.799-11.997-26.796-26.796-26.796c-14.799,0-26.796,11.997-26.796,26.796 c0,9.285,4.724,17.466,11.899,22.274l-7.777,44.715h45.347l-7.193-45.124C279.201,324.027,283.672,316.046,283.672,307.015z"></path> <path d="M279.55,384.204h-45.347c-3.011,0-5.868-1.33-7.805-3.634c-1.938-2.304-2.759-5.346-2.243-8.312l6.762-38.883 c-7.003-6.89-11.036-16.34-11.036-26.359c0-20.399,16.596-36.996,36.995-36.996s36.995,16.596,36.995,36.996 c0,9.725-3.857,19.001-10.551,25.857l6.302,39.527c0.469,2.949-0.375,5.954-2.313,8.226 C285.371,382.895,282.535,384.204,279.55,384.204z M246.329,363.806h21.267l-5.312-33.319c-0.611-3.832,1.006-7.679,4.171-9.924 c4.395-3.117,7.018-8.181,7.018-13.547c0-9.152-7.445-16.597-16.596-16.597c-9.151,0-16.596,7.445-16.596,16.597 c0,5.546,2.758,10.705,7.377,13.802c3.348,2.244,5.061,6.249,4.37,10.221L246.329,363.806z"></path> <path d="M130.55,268.239c-5.633,0-10.199-4.566-10.199-10.199v-13.259c0-5.633,4.566-10.199,10.199-10.199 s10.199,4.566,10.199,10.199v13.259C140.749,263.673,136.183,268.239,130.55,268.239z"></path> <path d="M130.55,340.781c-5.633,0-10.199-4.566-10.199-10.199v-34.805c0-5.633,4.566-10.199,10.199-10.199 s10.199,4.566,10.199,10.199v34.805C140.749,336.215,136.183,340.781,130.55,340.781z"></path> </g></svg></span>
+			<% } %>
+			<span title="Jesus Fish"><svg class="jesusfish svgfill4" height="34px" width="34px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.999 511.999" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path class="svgfill5" d="M503.742,360.214c-3.301,0-6.418-1.993-7.693-5.253c-12.705-32.495-31.766-61.692-55.562-86.539 c-11.928,11.411-24.935,21.938-38.938,31.477c-51.535,35.104-112.6,53.911-176.596,54.386c-42.672,0.337-84.038-7.486-122.93-23.26 c-37.556-15.231-71.048-37.113-99.543-65.036c-1.568-1.537-2.46-3.634-2.479-5.828c-0.019-2.196,0.838-4.307,2.379-5.87 c28.08-28.458,61.214-50.951,98.485-66.854c38.635-16.485,79.89-25.057,122.619-25.481c0.687-0.004,1.374-0.007,2.06-0.007 c63.207,0,123.727,17.916,175.178,51.867c14.22,9.384,27.449,19.78,39.6,31.082c23.54-25.282,42.24-54.891,54.489-87.739 c1.593-4.274,6.351-6.447,10.622-4.852c4.273,1.593,6.446,6.35,4.852,10.622c-12.951,34.732-32.656,66.375-58.101,93.647 c25.719,26.801,45.811,58.01,59.246,92.369c1.66,4.247-0.436,9.038-4.684,10.698C505.759,360.031,504.742,360.214,503.742,360.214z M20.129,259.991c54.964,50.838,127.302,78.371,204.697,77.78c78.288-0.581,151.155-30.893,203.784-81.026 c-53.36-49.418-126.732-78.808-204.993-78.272C146.264,179.238,74.334,208.118,20.129,259.991z"></path> </g></svg></span>
+			<div id="scrollBox" title="Host: Auto Scroll Enabled"><svg  title="Host: Auto Scroll Enabled" width="34px" height="34px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M9.17154 16.8182L7.75732 18.2324L12 22.475L16.2426 18.2324L14.8284 16.8182L12 19.6466L9.17154 16.8182Z" fill="#000000"></path> <path d="M14.8284 7.182L16.2426 5.76779L12 1.52515L7.75733 5.76779L9.17155 7.182L12 4.35357L14.8284 7.182Z" fill="#000000"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 9.00018C13.6569 9.00018 15 10.3433 15 12.0002C15 13.657 13.6569 15.0002 12 15.0002C10.3431 15.0002 9 13.657 9 12.0002C9 10.3433 10.3431 9.00018 12 9.00018ZM12 11.0002C12.5523 11.0002 13 11.4479 13 12.0002C13 12.5525 12.5523 13.0002 12 13.0002C11.4477 13.0002 11 12.5525 11 12.0002C11 11.4479 11.4477 11.0002 12 11.0002Z" fill="#b51c1c"></path> </g></svg></div>
+		</h1>
+
+		<% if (host) { %>
+				<input type="text" id="searchInput" class="innerOutterShadows" autocomplete="off" placeholder="Enter Bible reference (e.g., John 3:16, Mark 1, Luke 1:1)"/>
+				<div id="suggestions" class="suggestions-container inneroutterGlow round3"></div>
+				<div class="dropdown">
+					<button class="dropbtn"><svg fill="#000000" height="18px" width="18px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512.001 512.001" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M134.851,442.409c8.035,0,270.939,0,278.89,0c8.422,0,15.249-6.827,15.249-15.249V15.249 C428.989,6.828,422.162,0,413.74,0H117.808C98.59,0,83.012,15.578,83.012,34.796c0,33.579,0,412.172,0,425.365 c0,28.584,23.255,51.84,51.839,51.84h277.093c9.413,0,17.044-7.631,17.044-17.044c0-9.413-7.631-17.044-17.044-17.044H134.851 c-9.788,0-17.751-7.963-17.751-17.752S125.063,442.409,134.851,442.409z M218.502,130.798h20.454v-27.272 c0-9.413,7.631-17.044,17.044-17.044c9.413,0,17.044,7.631,17.044,17.044v27.272h20.454c9.413,0,17.044,7.631,17.044,17.044 s-7.631,17.044-17.044,17.044h-20.454v88.63c0,9.413-7.631,17.044-17.044,17.044c-9.413,0-17.044-7.631-17.044-17.044v-88.63 h-20.454c-9.413,0-17.044-7.631-17.044-17.044S209.089,130.798,218.502,130.798z"></path> </g> </g> </g></svg> Select Bibles</button>
+					<div class="dropdown-content" id="dropdown-content">
+						<!-- Bible versions will be populated here -->
+					</div>
+				</div>
+		<% } %>
+		<div id="loading">
+			<span class="loading-dot">.</span> <span class="loading-dot">.</span> <span class="loading-dot">.</span>
+		</div>
+		<div id="results" class="innerBox"></div>
+		<div id="alerts" class="inneroutterGlow"></div>
+	</main>
+	<div id="heart" title="Like This Session">
+		<span id="likeCount" title="Like Count"></span>
+		<svg fill="#df4949" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" stroke="#df4949"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M256,448l-9-6c-42.78-28.57-96.91-60.86-137-108.32-42.25-50-62.52-101.35-62-157C48.63,114.54,98.46,64,159.08,64c48.11,0,80.1,28,96.92,48.21C272.82,92,304.81,64,352.92,64,413.54,64,463.37,114.54,464,176.65c.56,55.68-19.71,107-62,157C361.91,381.14,307.78,413.43,265,442Z"></path></g></svg>
+	</div>
+	<div id="data-container" 
+	data-bibles='<%- JSON.stringify(bibles) %>' 
+	data-session='<%= session %>'
+	data-versions='<%- JSON.stringify(versions) %>' 
+	data-UUID='<%= uuid %>' 
+	data-ishost='<%= host %>'
+	data-chapters='<%- JSON.stringify(chapters) %>'>
+	</div>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="../../javascript/custom.js"></script>
+	<script src="../../javascript/live.js"></script>
+</body>
+</html>

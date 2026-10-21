@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="<%= langType %>">
+<head>
+<!--
+/**  ██╗██╗                                                                 ██╗██╗
+ *   ██║╚═╝  ████████╗ ██████    ██████╗UOTES  ██████╗ ██████╗ ███╗   ███╗  ╚═╝██║
+ *   ██║     ╚══██╔══╝ ██╔═██╗I ██╔═══██╗     ██╔════╝██╔═══██╗████╗ ████║     ██║
+ *   ██║        ██║H   █████╔╝B ██║   ██║     ██║     ██║   ██║██╔████╔██║     ██║
+ *   ██║        ██║E   ██║ ██╗L ██║  █ █║     ██║     ██║   ██║██║╚██╔╝██║     ██║
+ *   ██║        ██║    ██████║E ╚█████ ██╗ ██╗╚██████╗╚██████╔╝██║ ╚═╝ ██║     ██║
+ *   ██║██╗     ╚═╝      ╚═══╝S  ╚═══════╝ ╚═╝ ╚═════╝ ╚═════╝ ╚═╝     ╚═╝  ██╗██║
+ *   ╚═╝╚═╝                                                                 ╚═╝╚═╝
+ * TheBiblesQuotes Project
+ * © 2025 BadNintendo - PersonalStudy.EJS
+ * All rights reserved.
+ * Unauthorized copying of this file, via any medium, is strictly prohibited.
+ * 
+ * USAGE:
+ * This software is provided 'as-is', without express or implied warranty. The authors are
+ * not liable for damages arising from its use.
+ * 
+ * You may use this software for personal and commercial purposes under the following conditions:
+ * 1. Do not misrepresent the origin of the software; do not claim it as your own.
+ * 2. Altered versions must be marked as such and not misrepresented as the original.
+ * 3. This notice must remain intact in all source distributions.
+ * Notes:
+ * 1. Bring results container to bottom of container and main container to bottom of page.
+ */
+ -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=690">
+	<meta name="description" content="Immerse yourself in the teachings of God's Word by hosting a live session. Deepen your understanding of Jesus's messages and explore the scriptures in their entirety.">
+	<meta name="author" content="BadNintendo">
+	<meta name="keywords" content="Live Bible Study, Bible, full book, scriptures, verses, chapters, study, reflection, God, Jesus, faith, Christianity, devotion, worship, Gospel, religious resources, prayer, Bible study tools, KJV, NKJV, WEB, ESV, NIV, NLT, NET, NLV, TYNDALE, GENEVA, COVERDALE, BISHOPS, ASV">
+	<meta name="robots" content="index, follow">
+	<meta property="og:url" content="https://thebiblesquotes.com/nextpost?session=<%= session %>`">
+	<meta property="og:title" content="The Bibles Quotes - Post it & Next it">
+	<meta property="og:description" content="Post it & Next it to enrich your faith journey. Dive deep into God's Word and explore the profound teachings of Jesus through scripture.">
+	<meta property="og:image" content="https://thebiblesquotes.com/images/tbqlogo.png">
+	<meta property="og:type" content="website">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:url" content="https://thebiblesquotes.com/nextpost?session=<%= session %>">
+	<meta name="twitter:title" content="The Bibles Quotes - Post it & Next it">
+	<meta name="twitter:description" content="Enrich your spiritual journey by hosting a post it & next it session. Choose your favorite scripture and delve into the powerful teachings of faith, God, and Jesus.">
+	<meta name="twitter:image" content="https://thebiblesquotes.com/images/tbqlogo.png">
+	<meta name="twitter:site" content="@TheBiblesQuote">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="icon" href="https://thebiblesquotes.com/images/tbq.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="https://thebiblesquotes.com/images/tbq.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" sizes="120x120" href="https://thebiblesquotes.com/images/tbq.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="https://thebiblesquotes.com/images/tbq.png">
+	<title>Post it & Next it | Session <%= session %></title>
+	<link rel="canonical" href="https://thebiblesquotes.com/nextpost?session=<%= session %>">
+	<link rel="stylesheet" href="../css/personalStudy.css">
+	<link rel="stylesheet" href="../css/shared.css">
+	<link rel="stylesheet" href="../css/highlight.css">
+    <% if (highLight && highLight.trim() !== '') { %>
+		<% const [bgColor, textColor] = highLight.split(',').map(color => color.trim()).filter(Boolean); %>
+		<link rel="stylesheet" id="custom" href="../css/highlight.css?highlight=<%= bgColor %>,<%= textColor %>">
+	<% } %>
+</head>
+<body class="<%= darkMode ? 'dark-mode ' : '' %>">
+	<div class="file-uploader-container" id="file-uploader-container">
+		<div id="file-uploader" title="Image File Uploader">
+			<svg width="34px" height="34px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path fill="none" d="M0 0h24v24H0z"></path> <path d="M21 15v3h3v2h-3v3h-2v-3h-3v-2h3v-3h2zm.008-12c.548 0 .992.445.992.993v9.349A5.99 5.99 0 0 0 20 13V5H4l.001 14 9.292-9.293a.999.999 0 0 1 1.32-.084l.093.085 3.546 3.55a6.003 6.003 0 0 0-3.91 7.743L2.992 21A.993.993 0 0 1 2 20.007V3.993A1 1 0 0 1 2.992 3h18.016zM8 7a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"></path> </g> </g></svg>
+		</div>
+		<input type="file" id="file-upload" accept="image/*">
+	</div>
+	<div class="switchBox" title="Light and Dark Theme">
+		<input type="checkbox" id="theme-toggle" class="switch" <%= darkMode ? 'checked=""' : '' %>>
+		<span class="slider round"></span>
+	</div>
+	<main class="mainContent<%= (defaultSize == 'small') ? ' narrow' : ''; %>" id="content">
+		<!--<div id="controlBox">
+			<span id="addContainer" title="Add Container">
+				<svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M11 8C11 7.44772 11.4477 7 12 7C12.5523 7 13 7.44771 13 8V11H16C16.5523 11 17 11.4477 17 12C17 12.5523 16.5523 13 16 13H13V16C13 16.5523 12.5523 17 12 17C11.4477 17 11 16.5523 11 16V13H8C7.44772 13 7 12.5523 7 12C7 11.4477 7.44771 11 8 11H11V8Z" fill="#0F0F0F"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M23 4C23 2.34315 21.6569 1 20 1H4C2.34315 1 1 2.34315 1 4V20C1 21.6569 2.34315 23 4 23H20C21.6569 23 23 21.6569 23 20V4ZM21 4C21 3.44772 20.5523 3 20 3H4C3.44772 3 3 3.44772 3 4V20C3 20.5523 3.44772 21 4 21H20C20.5523 21 21 20.5523 21 20V4Z" fill="#0F0F0F"></path> </g></svg>
+			</span>
+			<span id="selectFont" title="Select Font">
+				<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="🔍-System-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="ic_fluent_text_font_24_regular" fill="#212121" fill-rule="nonzero"> <path d="M14.5033,5.99999992 C14.8108,5.99999992 15.0871,6.18799 15.2003,6.47391 L20.7552,20.5042 L21.2492,20.5042 C21.6634,20.5042 21.9992,20.84 21.9992,21.2542 C21.9992,21.6684 21.6634,22.0043 21.2492,22.0043 L18.75,22.0041 C18.3358,22.0041 18,21.6683 18,21.2541 C18,20.8399 18.3358,20.5041 18.75,20.5041 L19.1419,20.5041 L17.9525,17.4999999 L11.0426,17.4999999 L9.85007,20.5042 L10.2492,20.5042 C10.6634,20.5042 10.9992,20.84 10.9992,21.2542 C10.9992,21.6684 10.6634,22.0043 10.2492,22.0043 L7.74998,22.0041 C7.33577,22.0041 7,21.6683 7,21.2541 C7,20.8399 7.3358,20.5041 7.75002,20.5041 L8.23622,20.5041 L13.8059,6.47329 C13.9193,6.18746 14.1958,5.99999992 14.5033,5.99999992 Z M14.5021,8.78508 L11.638,16 L17.3586,16 L14.5021,8.78508 Z M7.00005,2 C7.31395,2 7.59464,2.19551 7.70349,2.48994 L10.8898,11.109 L10.0618,13.195 L9.43546,11.5008 L4.5638,11.5008 L3.45103,14.5101 C3.30737,14.8986 2.87596,15.0971 2.48746,14.9534 C2.09896,14.8098 1.90047,14.3784 2.04413,13.9899 L6.29657,2.48988 C6.40544,2.19546 6.68615,2 7.00005,2 Z M6.99993,4.91271 L5.11847,10.0008 L8.88093,10.0008 L6.99993,4.91271 Z" id="🎨-Color"> </path> </g> </g> </g></svg>
+			</span>
+			<span id="colorSelection" title="Select Colors">
+				<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Font-Color"> <rect id="Rectangle" fill-rule="nonzero" x="0" y="0" width="24" height="24"> </rect> <path d="M18,13.1842 C18,16.6723 15.3137,19.5 12,19.5 C8.68629,19.5 6,16.6723 6,13.1842 C6,8.5 12,5 12,5 C12,5 18,8.5 18,13.1842 Z" id="Path" stroke="#0C0310" stroke-width="2" stroke-linecap="round"> </path> <path d="M12,15.5 C10.8954,15.5 10,14.6046 10,13.5" id="Path" stroke="#0C0310" stroke-width="2" stroke-linecap="round"> </path> </g> </g> </g></svg>
+			</span>
+			<span id="textLeft" title="Text Left">
+				<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Align-Left"> <rect id="Rectangle" fill-rule="nonzero" x="0" y="0" width="24" height="24"> </rect> <line x1="5" y1="6" x2="19" y2="6" id="Path" stroke="#0C0310" stroke-width="2" stroke-linecap="round"> </line> <line x1="5" y1="14" x2="19" y2="14" id="Path" stroke="#0C0310" stroke-width="2" stroke-linecap="round"> </line> <line x1="5" y1="10" x2="13" y2="10" id="Path" stroke="#0C0310" stroke-width="2" stroke-linecap="round"> </line> <line x1="5" y1="18" x2="13" y2="18" id="Path" stroke="#0C0310" stroke-width="2" stroke-linecap="round"> </line> </g> </g> </g></svg>
+			</span>
+			<span id="textCenter" title="Text Center">
+				<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Align-Center"> <rect id="Rectangle" fill-rule="nonzero" x="0" y="0" width="24" height="24"> </rect> <line x1="5" y1="6" x2="19" y2="6" id="Path" stroke="#0C0310" stroke-width="2" stroke-linecap="round"> </line> <line x1="5" y1="14" x2="19" y2="14" id="Path" stroke="#0C0310" stroke-width="2" stroke-linecap="round"> </line> <line x1="8" y1="10" x2="16" y2="10" id="Path" stroke="#0C0310" stroke-width="2" stroke-linecap="round"> </line> <line x1="8" y1="18" x2="16" y2="18" id="Path" stroke="#0C0310" stroke-width="2" stroke-linecap="round"> </line> </g> </g> </g></svg>
+			</span>
+			<span id="textRight" title="Text Right">
+				<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Align-Right"> <rect id="Rectangle" fill-rule="nonzero" x="0" y="0" width="24" height="24"> </rect> <line x1="5" y1="6" x2="19" y2="6" id="Path" stroke="#0C0310" stroke-width="2" stroke-linecap="round"> </line> <line x1="5" y1="14" x2="19" y2="14" id="Path" stroke="#0C0310" stroke-width="2" stroke-linecap="round"> </line> <line x1="11" y1="10" x2="19" y2="10" id="Path" stroke="#0C0310" stroke-width="2" stroke-linecap="round"> </line> <line x1="11" y1="18" x2="19" y2="18" id="Path" stroke="#0C0310" stroke-width="2" stroke-linecap="round"> </line> </g> </g> </g></svg>
+			</span>
+			<span id="borderContainer" title="Border Container">
+				<svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path clip-rule="evenodd" d="m7.8 2.25h-.0321-.00002c-.81283-.00001-1.46844-.00001-1.99935.04336-.54663.04467-1.02678.13903-1.47099.36537-.70561.35952-1.27929.9332-1.63881 1.63881-.22634.44421-.3207.92436-.36537 1.47099-.04337.53091-.04337 1.18652-.04336 1.99935v.00002.0321 8.4.0321c-.00001.8129-.00001 1.4685.04336 1.9994.04467.5466.13903 1.0267.36537 1.471.35952.7056.9332 1.2792 1.63881 1.6388.44421.2263.92436.3207 1.47099.3653.53091.0434 1.18652.0434 1.99935.0434h.03212 8.4.0321c.8129 0 1.4685 0 1.9994-.0434.5466-.0446 1.0267-.139 1.471-.3653.7056-.3596 1.2792-.9332 1.6388-1.6388.2263-.4443.3207-.9244.3653-1.471.0434-.5309.0434-1.1865.0434-1.9994v-.0321-8.4-.03212c0-.81283 0-1.46844-.0434-1.99935-.0446-.54663-.139-1.02678-.3653-1.47099-.3596-.70561-.9332-1.27929-1.6388-1.63881-.4443-.22634-.9244-.3207-1.471-.36537-.5309-.04337-1.1865-.04337-1.9994-.04336h-.0321zm-2.82148 1.74524c.19752-.10064.45829-.16977.91216-.20686.46263-.0378 1.05687-.03838 1.90932-.03838h8.4c.8525 0 1.4467.00058 1.9093.03838.4539.03709.7147.10622.9122.20686.4233.21571.7675.55992.9833.98328.1006.19752.1697.45829.2068.91216.0378.46263.0384 1.05687.0384 1.90932v8.4c0 .8525-.0006 1.4467-.0384 1.9093-.0371.4539-.1062.7147-.2068.9122-.2158.4233-.56.7675-.9833.9833-.1975.1006-.4583.1697-.9122.2068-.4626.0378-1.0568.0384-1.9093.0384h-8.4c-.85245 0-1.44669-.0006-1.90932-.0384-.45387-.0371-.71464-.1062-.91216-.2068-.42336-.2158-.76757-.56-.98328-.9833-.10064-.1975-.16977-.4583-.20686-.9122-.0378-.4626-.03838-1.0568-.03838-1.9093v-8.4c0-.85245.00058-1.44669.03838-1.90932.03709-.45387.10622-.71464.20686-.91216.21571-.42336.55992-.76757.98328-.98328zm8.22148 2.75476c.8525 0 1.4467.00058 1.9093.03838.4539.03709.7147.10622.9122.20686.4233.21571.7675.55992.9833.98328.1006.19752.1697.45828.2068.91216.0378.46263.0384 1.05687.0384 1.90932v2.2c0 .4142.3358.75.75.75s.75-.3358.75-.75v-2.2-.0321c0-.81284 0-1.46846-.0434-1.99937-.0446-.54663-.139-1.02678-.3653-1.47099-.3596-.70561-.9332-1.27929-1.6388-1.63881-.4443-.22634-.9244-.3207-1.471-.36537-.5309-.04337-1.1866-.04337-1.9994-.04336h-.0321-2.2c-.4142 0-.75.33579-.75.75s.3358.75.75.75z" fill="#000000" fill-rule="evenodd"></path></g></svg>
+			</span>
+			<span id="textPadding" title="Text Padding">
+				<svg fill="#000000" width="24px" height="24px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>resize1</title> <path d="M27.407 7.882l-2.665-2.665-4.925 4.925-3.815-3.815-0.004 9.68 9.723-0.017-3.238-3.183 4.924-4.925zM8.577 20.383l-4.453 4.453 2.665 2.666 4.453-4.455 3.732 3.732 0.004-9.734-9.784-0.045 3.383 3.383z"></path> </g></svg>
+			</span>
+			<span id="timedContainer" title="Timed Container">
+				<svg fill="#000000" width="24px" height="24px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M27.229 14.775c-1.374-3.807-4.725-6.729-8.891-7.659 1.067-1.532 2.836-2.539 4.845-2.539 3.264 0 5.909 2.646 5.909 5.91 0 1.694-0.722 3.211-1.863 4.288zM15.864 4.799v3.716c5.67 0.231 10.199 4.888 10.199 10.614 0 2.392-0.799 4.592-2.13 6.367l2.464 4.269-2.047 1.183-2.109-3.654c-1.846 1.543-4.221 2.474-6.814 2.474-2.579 0-4.943-0.919-6.784-2.445l-2.165 3.747-2.047-1.183 2.516-4.356c-1.348-1.782-2.156-3.995-2.156-6.402 0-5.688 4.468-10.319 10.084-10.608v-3.722c-0.573-0.205-0.989-0.74-0.989-1.385 0-0.82 0.665-1.484 1.484-1.484s1.485 0.665 1.485 1.484c-0.001 0.645-0.417 1.18-0.991 1.385zM7.153 19.129c0 4.57 3.704 8.273 8.273 8.273s8.273-3.703 8.273-8.273c0-4.568-3.705-8.272-8.273-8.272s-8.273 3.704-8.273 8.272zM17.906 20.918h-2.969c-0.547 0-0.99-0.443-0.99-0.99v-3.959c0-0.547 0.443-0.99 0.99-0.99 0.546 0 0.989 0.443 0.989 0.99v2.969h1.979c0.547 0 0.99 0.443 0.99 0.99s-0.442 0.99-0.989 0.99zM3.772 14.775c-1.142-1.078-1.864-2.594-1.864-4.288 0-3.264 2.646-5.91 5.91-5.91 2.008 0 3.776 1.007 4.845 2.539-4.166 0.93-7.517 3.852-8.891 7.659z"></path> </g></svg>
+			</span>
+			<div id="controlInputs" class="hide">
+				<input class="hide" type="text" id="textInputs" pattern="^(?:([0-4]\d|5[0]):[0-5]\d:[0-5]\d|(?:150|1[0-4]\d|\d{1,2}))$" title="Enter a time (HH:MM:SS up to 05:00:00) or a number between 0 and 150" placeholder="Value" />
+				<div id="toggleHighlight" class="hide"><center>
+					<div id="colorModeToggle">
+						<button id="toggleBg" class="active">BG C</button>
+						<button id="toggleTxt">TXT C</button>
+					</div>
+					<div id="colorGridWrapper">
+						<div id="colorGrid" tabindex="0" role="grid"></div>
+					</div>
+					<div class="smalldesc">Tab (Changes) <span title="Approved (Green)" id="coloredDot">&#9900;</span></div>
+					<div id="highlightExample" class="highlighted">Sample highlighted text</div>
+				</center></div>
+				<div id="font-selection" class="hide">
+					<label for="font-select">Choose a font:</label>
+					<select id="font-select" name="font">
+						<option value="" selected disabled>Selected Font</option>
+						<option value="arial" class="arial">Arial</option>
+						<option value="helvetica" class="helvetica">Helvetica</option>
+						<option value="times-new-roman" class="times-new-roman">Times New Roman</option>
+						<option value="georgia" class="georgia">Georgia</option>
+						<option value="courier-new" class="courier-new">Courier New</option>
+						<option value="verdana" class="verdana">Verdana</option>
+						<option value="tahoma" class="tahoma">Tahoma</option>
+						<option value="trebuchet-ms" class="trebuchet-ms">Trebuchet MS</option>
+						<option value="lucida-console" class="lucida-console">Lucida Console</option>
+						<option value="impact" class="impact">Impact</option>
+					</select>
+				</div>
+			</div>
+		</div>-->
+		
+	<!--start-->
+  <div id="controlBox" class="toolbox">
+
+    <!-- 🧱 Container Controls -->
+    <div class="toolGroup" aria-label="Container Controls">
+      <button id="addContainer" class="toolBtn" title="Add Container">&#x2795;</button>
+      <button id="timedContainer" class="toolBtn" title="Timed Container">&#x23F1;</button>
+      <button id="removeContainer" class="toolBtn" title="Remove Container">&#x274C;</button>
+      <button id="lockContainer" class="toolBtn" title="Lock/Unlock Container">&#x1F512;</button>
+      <button id="zUp" class="toolBtn" title="Bring Forward">&#x25B2;</button>
+      <button id="zDown" class="toolBtn" title="Send Backward">&#x25BC;</button>
+    </div>
+
+    <!-- ✍️ Text Controls -->
+    <div class="toolGroup" aria-label="Text Controls">
+      <button id="selectFont" class="toolBtn" title="Select Font">&#x1D504;</button>
+      <button id="fontSizeUp" class="toolBtn" title="Increase Font Size">A+</button>
+      <button id="fontSizeDown" class="toolBtn" title="Decrease Font Size">A−</button>
+      <button id="boldToggle" class="toolBtn" title="Bold"><strong>B</strong></button>
+      <button id="italicToggle" class="toolBtn" title="Italic"><em>I</em></button>
+      <button id="underlineToggle" class="toolBtn" title="Underline"><u>U</u></button>
+      <button id="textLeft" class="toolBtn" title="Align Left">&#x21E4;</button>
+      <button id="textCenter" class="toolBtn" title="Align Center">&#x21C6;</button>
+      <button id="textRight" class="toolBtn" title="Align Right">&#x21E5;</button>
+      <button id="textPadding" class="toolBtn" title="Text Padding">&#x25A1;</button>
+    </div>
+
+    <!-- 🎨 Style Controls -->
+    <div class="toolGroup" aria-label="Style Controls">
+      <button id="colorSelection" class="toolBtn" title="Select Colors">&#x1F3A8;</button>
+      <button id="borderContainer" class="toolBtn" title="Toggle Border">&#x25AD;</button>
+      <button id="shadowToggle" class="toolBtn" title="Toggle Shadow">&#x1F4A1;</button>
+      <button id="opacityControl" class="toolBtn" title="Opacity">&#x1F50C;</button>
+    </div>
+
+    <!-- 📤 Import/Export -->
+    <div class="toolGroup" aria-label="Import/Export">
+      <button id="exportHTML" class="toolBtn" title="Export HTML">&#x1F4C4;&#x2192;</button>
+      <button id="importJSON" class="toolBtn" title="Import JSON">&#x2190;&#x1F4C4;</button>
+    </div>
+
+    <!-- 🧪 Dynamic Inputs -->
+    <div id="controlInputs" class="panel hide">
+      <input type="text" id="textInputs" class="inputField hide"
+        pattern="^(?:([0-4]\d|5[0]):[0-5]\d:[0-5]\d|(?:150|1[0-4]\d|\d{1,2}))$"
+        title="Enter time (HH:MM:SS) or number (0–150)"
+        placeholder="Enter value..." />
+
+      <!-- 🎨 Color Picker -->
+      <div id="toggleHighlight" class="panel hide">
+        <div class="colorControls">
+          <div id="colorModeToggle" class="toggleGroup">
+            <button id="toggleBg" class="toggleBtn active">BG</button>
+            <button id="toggleTxt" class="toggleBtn">TXT</button>
+          </div>
+          <div id="colorGridWrapper">
+            <div id="colorGrid" tabindex="0" role="grid"></div>
+          </div>
+          <div class="smalldesc">
+            Tab to cycle colors <span id="coloredDot" title="Active">&#9900;</span>
+          </div>
+          <div id="highlightExample" class="highlighted">Sample highlighted text</div>
+        </div>
+      </div>
+
+      <!-- ✍️ Font Selection -->
+      <div id="font-selection" class="panel hide">
+        <label for="font-select">Choose a font:</label>
+        <select id="font-select" name="font" class="fontDropdown">
+          <option value="" selected disabled>Selected Font</option>
+          <option value="arial">Arial</option>
+          <option value="helvetica">Helvetica</option>
+          <option value="times-new-roman">Times New Roman</option>
+          <option value="georgia">Georgia</option>
+          <option value="courier-new">Courier New</option>
+          <option value="verdana">Verdana</option>
+          <option value="tahoma">Tahoma</option>
+          <option value="trebuchet-ms">Trebuchet MS</option>
+          <option value="lucida-console">Lucida Console</option>
+          <option value="impact">Impact</option>
+        </select>
+      </div>
+    </div>
+  </div>
+<!--end-->
+	</main>
+	<div id="data-container" 
+		data-session='<%= session %>' 
+		data-UUID='<%= uuid %>'>
+	</div>
+	<script src="../../javascript/personalStudy.js"></script>
+</body>
+</html>

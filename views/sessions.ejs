@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="<%= langType %>">
+<head>
+<!--
+/**  ██╗██╗                                                                 ██╗██╗
+ *   ██║╚═╝  ████████╗ ██████    ██████╗UOTES  ██████╗ ██████╗ ███╗   ███╗  ╚═╝██║
+ *   ██║     ╚══██╔══╝ ██╔═██╗I ██╔═══██╗     ██╔════╝██╔═══██╗████╗ ████║     ██║
+ *   ██║        ██║H   █████╔╝B ██║   ██║     ██║     ██║   ██║██╔████╔██║     ██║
+ *   ██║        ██║E   ██║ ██╗L ██║  █ █║     ██║     ██║   ██║██║╚██╔╝██║     ██║
+ *   ██║        ██║    ██████║E ╚█████ ██╗ ██╗╚██████╗╚██████╔╝██║ ╚═╝ ██║     ██║
+ *   ██║██╗     ╚═╝      ╚═══╝S  ╚═══════╝ ╚═╝ ╚═════╝ ╚═════╝ ╚═╝     ╚═╝  ██╗██║
+ *   ╚═╝╚═╝                                                                 ╚═╝╚═╝
+ * TheBiblesQuotes Project
+ * © 2025 BadNintendo - Sessions.EJS
+ * All rights reserved.
+ * Unauthorized copying of this file, via any medium, is strictly prohibited.
+ * 
+ * USAGE:
+ * This software is provided 'as-is', without express or implied warranty. The authors are
+ * not liable for damages arising from its use.
+ * 
+ * You may use this software for personal and commercial purposes under the following conditions:
+ * 1. Do not misrepresent the origin of the software; do not claim it as your own.
+ * 2. Altered versions must be marked as such and not misrepresented as the original.
+ * 3. This notice must remain intact in all source distributions.
+ */
+ -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=690">
+	<meta name="description" content="Immerse yourself in the teachings of God's Word by hosting a live session. Deepen your understanding of Jesus's messages and explore the scriptures in their entirety.">
+	<meta name="author" content="BadNintendo">
+	<meta name="keywords" content="Live Bible Study, Bible, full book, scriptures, verses, chapters, study, reflection, God, Jesus, faith, Christianity, devotion, worship, Gospel, religious resources, prayer, Bible study tools, KJV, NKJV, WEB, ESV, NIV, NLT, NET, NLV, TYNDALE, GENEVA, COVERDALE, BISHOPS, ASV">
+	<meta name="robots" content="index, follow">
+	<meta property="og:url" content="https://thebiblesquotes.com/live/directory">
+	<meta property="og:title" content="The Bibles Quotes - Search a Live Bible Study">
+	<meta property="og:description" content="Live Bible Study to enrich your faith journey. Dive deep into God's Word and explore the profound teachings of Jesus through scripture.">
+	<meta property="og:image" content="https://thebiblesquotes.com/images/tbqlogo.png">
+	<meta property="og:type" content="website">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:url" content="https://thebiblesquotes.com/live/directory">
+	<meta name="twitter:title" content="The Bibles Quotes - Search a Live Bible Study">
+	<meta name="twitter:description" content="Enrich your spiritual journey by hosting a live session. Choose your favorite scripture and delve into the powerful teachings of faith, God, and Jesus.">
+	<meta name="twitter:image" content="https://thebiblesquotes.com/images/tbqlogo.png">
+	<meta name="twitter:site" content="@TheBiblesQuote">
+	<meta name="theme-color" content="#ffffff">
+	<meta http-equiv="Cache-Control" content="no-store" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<link rel="icon" href="https://thebiblesquotes.com/images/tbq.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="https://thebiblesquotes.com/images/tbq.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" sizes="120x120" href="https://thebiblesquotes.com/images/tbq.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="https://thebiblesquotes.com/images/tbq.png">
+	<title>Search a Live Bible Study</title>
+	<link rel="canonical" href="https://thebiblesquotes.com/live/directory">
+	<link rel="stylesheet" href="../css/shared.css">
+	<link rel="stylesheet" href="../css/sessions.css">
+</head>
+<body class="<%= darkMode ? 'dark-mode ' : '' %>">
+	<% if (!hostedAlready) { %><center><a href="https://live.thebiblesquotes.com/?host" class="hostIcon" title="Host a Live Session"><svg height="24px" width="24px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 59 59" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path class="svgfill" d="M54.392,19H3.608C1.616,19,0,17.384,0,15.392V3.608C0,1.616,1.616,0,3.608,0h50.783 C56.384,0,58,1.616,58,3.608v11.783C58,17.384,56.384,19,54.392,19z"></path> <path class="svgfill1" d="M54.392,38H3.608C1.616,38,0,36.384,0,34.392V22.608C0,20.616,1.616,19,3.608,19h50.783 C56.384,19,58,20.616,58,22.608v11.783C58,36.384,56.384,38,54.392,38z"></path> <path class="svgfill" d="M54.392,57H3.608C1.616,57,0,55.384,0,53.392V41.608C0,39.616,1.616,38,3.608,38h50.783 C56.384,38,58,39.616,58,41.608v11.783C58,55.384,56.384,57,54.392,57z"></path> <circle class="svgfill2" cx="9.5" cy="9.5" r="3.5"></circle> <circle class="svgfill2" cx="49" cy="8" r="1"></circle> <circle class="svgfill2" cx="45" cy="8" r="1"></circle> <circle class="svgfill2" cx="51" cy="11" r="1"></circle> <circle class="svgfill2" cx="47" cy="11" r="1"></circle> <circle class="svgfill2" cx="41" cy="8" r="1"></circle> <circle class="svgfill2" cx="43" cy="11" r="1"></circle> <circle class="svgfill2" cx="37" cy="8" r="1"></circle> <circle class="svgfill2" cx="39" cy="11" r="1"></circle> <circle class="svgfill2" cx="33" cy="8" r="1"></circle> <circle class="svgfill2" cx="35" cy="11" r="1"></circle> <circle class="svgfill2" cx="9.5" cy="28.5" r="3.5"></circle> <circle class="svgfill2" cx="49" cy="27" r="1"></circle> <circle class="svgfill2" cx="45" cy="27" r="1"></circle> <circle class="svgfill2" cx="51" cy="30" r="1"></circle> <circle class="svgfill2" cx="47" cy="30" r="1"></circle> <circle class="svgfill2" cx="41" cy="27" r="1"></circle> <circle class="svgfill2" cx="43" cy="30" r="1"></circle> <circle class="svgfill2" cx="37" cy="27" r="1"></circle> <circle class="svgfill2" cx="39" cy="30" r="1"></circle> <circle class="svgfill2" cx="33" cy="27" r="1"></circle> <circle class="svgfill2" cx="35" cy="30" r="1"></circle> <circle class="svgfill2" cx="9.5" cy="47.5" r="3.5"></circle> <circle class="svgfill2" cx="49" cy="46" r="1"></circle> <circle class="svgfill2" cx="45" cy="46" r="1"></circle> <circle class="svgfill2" cx="51" cy="49" r="1"></circle> <circle class="svgfill2" cx="47" cy="49" r="1"></circle> <circle class="svgfill2" cx="41" cy="46" r="1"></circle> <circle class="svgfill2" cx="43" cy="49" r="1"></circle> <circle class="svgfill2" cx="37" cy="46" r="1"></circle> <circle class="svgfill2" cx="39" cy="49" r="1"></circle> <circle class="svgfill2" cx="33" cy="46" r="1"></circle> <circle class="svgfill2" cx="35" cy="49" r="1"></circle> <g> <circle class ="changeTheme" cx="47" cy="47" r="12"></circle> <path class="svgfill3" d="M53,46h-5v-5c0-0.552-0.448-1-1-1s-1,0.448-1,1v5h-5c-0.552,0-1,0.448-1,1s0.448,1,1,1h5v5 c0,0.552,0.448,1,1,1s1-0.448,1-1v-5h5c0.552,0,1-0.448,1-1S53.552,46,53,46z"></path> </g> </g> </g></svg></a></center><% } %>
+	<div class="switchBox">
+		<input type="checkbox" id="theme-toggle" class="switch" <%= darkMode ? 'checked=""' : '' %>>
+		<span class="slider round"></span>
+	</div>
+	<div id="shareLive" title="Share">
+		<svg width="30px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M20 13L20 18C20 19.1046 19.1046 20 18 20L6 20C4.89543 20 4 19.1046 4 18L4 13" stroke="#999" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M16 8L12 4M12 4L8 8M12 4L12 16" stroke="#999" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+		<div id="shareBox">
+			<div id="socialx" class="socials x">
+				<?xml version="1.0"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" width="50px" height="50px" viewBox="0 0 24 24" class="svgbg" xml:space="preserve"><path d="M14.095479,10.316482L22.286354,1h-1.940718l-7.115352,8.087682L7.551414,1H1l8.589488,12.231093L1,23h1.940717  l7.509372-8.542861L16.448587,23H23L14.095479,10.316482z M11.436522,13.338465l-0.871624-1.218704l-6.924311-9.68815h2.981339  l5.58978,7.82155l0.867949,1.218704l7.26506,10.166271h-2.981339L11.436522,13.338465z"/></svg><br>
+				X
+			</div>
+			<div id="socialfb" class="socials fb">
+				<?xml version="1.0"?><svg id="Layer_1" class="svgbg" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path class="st0" d="M512,397.1c0,63.5-51.5,114.9-114.9,114.9H114.9C51.5,512,0,460.5,0,397.1V114.9C0,51.5,51.5,0,114.9,0h282.2   C460.5,0,512,51.5,512,114.9V397.1z"/><path class="st1" d="M299,164.7c8.6-0.3,17.2-0.1,25.8-0.1c1,0,2.1,0,3.5,0v-44.7c-4.6-0.5-9.4-1.1-14.2-1.3   c-8.8-0.4-17.6-0.8-26.5-0.6c-13.5,0.3-26.2,3.6-37.3,11.5c-12.8,9.2-19.8,22.1-22.4,37.3c-1.1,6.3-1.4,12.8-1.6,19.2   c-0.2,10,0,20,0,30.1v3.8h-42.7v49.9h42.5v125.4h51.9V269.9h42.4c2.2-16.6,4.3-33,6.5-50.1c-3.4,0-6.5,0-9.5,0   c-12.1,0.1-39.7,0-39.7,0s0.1-24.7,0.4-35.5C278.5,169.6,287.3,165.1,299,164.7z"/></g></svg><br>
+				Facebook
+			</div>
+			<div id="socialre" class="socials re">
+				<?xml version="1.0"?><svg id="Layer_1" class="svgbg" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path class="st0" d="M512,397.1c0,63.5-51.5,114.9-114.9,114.9H114.9C51.5,512,0,460.5,0,397.1V114.9C0,51.5,51.5,0,114.9,0h282.2   C460.5,0,512,51.5,512,114.9V397.1z"/><path class="st1" d="M399.1,240.5c-9.9-15.1-27.6-19-44.7-10.8c-3.4,1.7-8.9,1-12.7-0.5c-11.9-4.6-23-11.1-35.1-14.8   c-13.4-4.1-27.4-5.9-42.7-9c4.4-21.2,9-43,13.7-65.9c13,2.5,24.8,4.8,36.6,7.2c5.8,1.2,10.2,3,12.4,10.1c3,9.8,14.4,15.6,24,14.5   c9.9-1.2,18.8-9.3,20.9-19c2.1-9.5-2.5-19.9-11-24.9c-9.3-5.5-20.9-4.8-28.5,3.4c-4.7,5-9.2,5-14.8,3.8   c-13.1-2.8-26.4-5.2-39.5-8.4c-7.7-1.9-10.7,0.8-12.2,8.1c-4.4,21.6-9.6,43.1-13.8,64.7c-1.2,6.3-3.4,8.8-9.9,9   c-26.1,0.7-50.1,8.8-72.6,21.8c-3,1.8-8.6,1.6-11.8,0c-17.1-8.3-34.8-4.4-44.6,10.7c-9.3,14.2-5.5,32.9,8.5,44.5   c2.2,1.9,4.7,5.3,4.6,7.9c-0.9,25.6,10.3,45.3,29,61.4c48,41.4,136.6,45.5,190.4,8.7c25-17.1,41.9-38.9,40.4-71.3   c-0.1-2.2,2.7-5.1,4.8-6.8C404.6,273.6,408.4,254.6,399.1,240.5L399.1,240.5z M227.9,281.4c-0.1,11.8-10.8,22.2-22.7,22.1   c-12.6-0.1-21.9-9.6-21.8-22.4c0.1-12.6,9.9-22.6,22.1-22.5C217,258.9,228,270,227.9,281.4L227.9,281.4z M301.5,335.9   c2.1-1.5,5.9-0.5,8.9-0.7c-1.2,3.2-1.4,7.6-3.6,9.3c-15,11.5-32.7,13.9-51.5,15.8c-13.6-3.3-27.3-6.4-40.7-10.1   c-3.8-1.1-7.6-3.7-10.3-6.6c-1.8-2-1.7-5.7-2.4-8.7c2.8,0.1,6.3-0.8,8.2,0.6c14.9,10.7,31.9,12.8,49.3,12.3   C274.2,347.4,288.8,345,301.5,335.9L301.5,335.9z M328.6,281.8c-0.2,12.8-9.7,22-22.5,21.7c-11.8-0.2-22.4-11.1-22.1-22.8   c0.3-11.6,11.6-22.4,23.1-22.1C319.5,259.1,328.9,269.1,328.6,281.8L328.6,281.8z"/></g></svg>
+				Reddit
+			</div>
+			<div id="socialcu" class="socials copy">
+				<?xml version="1.0"?><svg height="50px" viewBox="0 0 21 21" width="50px" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(4 3)"><path d="m6.5 11.5-3-3 3-3"/><path d="m3.5 8.5h11"/><path d="m12.5 6.5v-4.00491374c0-.51283735-.3860402-.93550867-.8833789-.99327378l-.1190802-.00672622-1.9975409.00491374m-6 0-1.99754087-.00492752c-.51283429-.00124584-.93645365.38375378-.99544161.88094891l-.00701752.11906329v10.99753792c.00061497.5520447.44795562.9996604 1 1.0006148l10 .0061554c.5128356.0008784.9357441-.3848611.993815-.8821612l.006185-.1172316v-2.5"/><path d="m4.5.5h4c.55228475 0 1 .44771525 1 1s-.44771525 1-1 1h-4c-.55228475 0-1-.44771525-1-1s.44771525-1 1-1z"/></g></svg><br>
+				Copy URL
+			</div>
+		</div>
+	</div>
+	<main class="mainContent" id="content">
+		<% if (pages != false) { %>
+			<%- pages %>
+		<% } %>
+	</main>
+	<script src="../javascript/session.js"></script>
+</body>
+</html>

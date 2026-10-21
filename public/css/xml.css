@@ -1,0 +1,8 @@
+body { font-family: Arial, sans-serif; background: #f4f4f4; padding: 20px; }
+.verse-block { background: #fff; border: 1px solid #ccc; padding: 15px; margin-bottom: 20px; }
+.version { font-weight: bold; font-size: 1.2em; color: #2c3e50; }
+.reference { font-style: italic; color: #7f8c8d; }
+.text { margin-top: 10px; }
+.additional { margin-top: 10px; padding-left: 10px; border-left: 3px solid #ccc; }
+.additional-item { margin-bottom: 5px; }
+.label { font-weight: bold; color: #34495e; }

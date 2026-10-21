@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="<%= langType %>">
+<head>
+<!--
+/**  ██╗██╗                                                                 ██╗██╗
+ *   ██║╚═╝  ████████╗ ██████    ██████╗UOTES  ██████╗ ██████╗ ███╗   ███╗  ╚═╝██║
+ *   ██║     ╚══██╔══╝ ██╔═██╗I ██╔═══██╗     ██╔════╝██╔═══██╗████╗ ████║     ██║
+ *   ██║        ██║H   █████╔╝B ██║   ██║     ██║     ██║   ██║██╔████╔██║     ██║
+ *   ██║        ██║E   ██║ ██╗L ██║  █ █║     ██║     ██║   ██║██║╚██╔╝██║     ██║
+ *   ██║        ██║    ██████║E ╚█████ ██╗ ██╗╚██████╗╚██████╔╝██║ ╚═╝ ██║     ██║
+ *   ██║██╗     ╚═╝      ╚═══╝S  ╚═══════╝ ╚═╝ ╚═════╝ ╚═════╝ ╚═╝     ╚═╝  ██╗██║
+ *   ╚═╝╚═╝                                                                 ╚═╝╚═╝
+ * TheBiblesQuotes Project
+ * © 2025 BadNintendo - Error.EJS
+ * All rights reserved.
+ * Unauthorized copying of this file, via any medium, is strictly prohibited.
+ * 
+ * USAGE:
+ * This software is provided 'as-is', without express or implied warranty. The authors are
+ * not liable for damages arising from its use.
+ * 
+ * You may use this software for personal and commercial purposes under the following conditions:
+ * 1. Do not misrepresent the origin of the software; do not claim it as your own.
+ * 2. Altered versions must be marked as such and not misrepresented as the original.
+ * 3. This notice must remain intact in all source distributions. */
+ -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheBiblesQuotes Error</title>
+    <meta name="description" content="Dive deeper into God's Word with The Bibles Quotes, a platform for exploring scriptures, verses, and chapters from diverse Bible translations. Empower your faith journey with insights into God and Jesus's teachings.">
+	<link rel="icon" href="https://thebiblesquotes.com/images/tbq.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="https://thebiblesquotes.com/images/tbq.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" sizes="120x120" href="https://thebiblesquotes.com/images/tbq.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="https://thebiblesquotes.com/images/tbq.png">
+	<link rel="stylesheet" href="../css/error.css">
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <div id="content">
+        <% const errors = { 
+            '400': { title: '400 Bad Request', desc: 'The request cannot be fulfilled due to bad syntax.' },
+            '401': { title: '401 Login Error', desc: 'It appears that the password and/or user-name you entered was incorrect.' },
+            '403': { title: '403 Forbidden', desc: 'Sorry, employees and staff only.' },
+            '404': { title: '404 Missing', desc: 'We\'re sorry, but the page you\'re looking for is missing, hiding, or maybe it moved somewhere else and forgot to tell you.' },
+            '405': { title: '405 Method Not Allowed', desc: 'The method specified in the Request-Line is not allowed for the specified resource.' },
+            '408': { title: '408 Request Timeout', desc: 'Your browser failed to send a request in the time allowed by the server.' },
+            '414': { title: '414 URL Too Long', desc: 'The URL you entered is longer than the maximum length.' },
+            '500': { title: '500 Internal Server Error', desc: 'The request was unsuccessful due to an unexpected condition encountered by the server.' },
+            '502': { title: '502 Bad Gateway', desc: 'The server received an invalid response from the upstream server while trying to fulfill the request.' },
+            '504': { title: '504 Gateway Timeout', desc: 'The upstream server failed to send a request in the time allowed by the server.' }
+        }; %>
+        <h1 id="error-title">Error <%= errors[errorNum]?.title || errorNum || 'Unknown Error' %></h1>
+        <p id="error-description"><%= errors[errorNum]?.desc || 'An unknown error occurred.' %></p>
+		<ul class="error-page-meta">
+			<li>
+				<strong>Created by:</strong> BadNintendo - Web Developer & Programmer
+			</li>
+			<li>
+				<strong>Owner of:</strong> 
+				<a href="https://TheBiblesQuotes.com/">TheBiblesQuotes Domain</a>
+			</li>
+			<li>
+				<strong>Projects:</strong> 
+				<a href="https://github.com/BadNintendo">
+					GitHub <span id="word" style="font-weight:bold;">random</span> stuff
+				</a>
+			</li>
+			<li>
+				<strong>Issues?</strong> Contact me on Discord - <code>BadNintendo</code>
+			</li>
+			<li>
+				<strong>Navigation:</strong> 
+				<a href="<%= actionLink || 'javascript:history.go(-1)' %>">
+					<%= action || 'Click Here to Go Back!' %>
+				</a>
+			</li>
+		</ul>
+        <div id="error-details" class="error">Error Code: <%= errorNum %></div>
+    </div>
+	<script src="../javascript/error.js"></script>
+</body>
+</html>
